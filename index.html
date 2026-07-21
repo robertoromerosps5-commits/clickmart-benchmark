@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clickmart · Benchmark de Marca vs Competencia (Julio 2026)</title>
+<meta name="description" content="Reporte de benchmark competitivo de Clickmart (asistencia de viaje internacional Ecuador) frente a Assist Card, Universal Assistance, GO! Assistance y Seguro de Viaje Mundial. Web, SEO, redes, Meta Ads." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="preconnect" href="https://cdn.tailwindcss.com" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+<style>
+  :root {
+    --brand-navy: #0B1B3F;
+    --brand-blue: #2564EB;
+    --brand-cyan: #22D3EE;
+    --brand-orange: #F97316;
+    --brand-red: #EF4444;
+    --brand-green: #10B981;
+    --brand-amber: #F59E0B;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  .grad-hero { background: radial-gradient(1200px 600px at 20% -10%, #1E40AF 0%, transparent 60%), radial-gradient(900px 500px at 90% 0%, #0891B2 0%, transparent 55%), linear-gradient(180deg, #0B1B3F 0%, #050B1F 100%); }
+  .grad-card { background: linear-gradient(135deg, rgba(37,100,235,.08) 0%, rgba(34,211,238,.04) 100%); }
+  .semaforo-r { background: #FEE2E2; color: #991B1B; }
+  .semaforo-a { background: #FEF3C7; color: #92400E; }
+  .semaforo-v { background: #D1FAE5; color: #065F46; }
+  .chip { display:inline-flex; align-items:center; gap:.35rem; padding:.15rem .55rem; border-radius:999px; font-size:.72rem; font-weight:600; }
+  .sec-anchor { scroll-margin-top: 90px; }
+  .glow { box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 10px 40px -10px rgba(37,100,235,.35); }
+  table.cmp th, table.cmp td { border-bottom: 1px solid #E5E7EB; padding: .65rem .8rem; text-align: left; font-size: .875rem; }
+  table.cmp thead th { background: #F8FAFC; font-weight: 600; color:#0F172A; position: sticky; top: 0; }
+  table.cmp tbody tr:hover { background:#F8FAFC; }
+  .kpi-num { font-variant-numeric: tabular-nums; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display:none; }
+  .tab-btn[aria-selected="true"] { background: var(--brand-blue); color: white; }
+  .prose-tight p { margin: .4rem 0; }
+  @media print {
+    .no-print { display:none !important; }
+    body { background:white; }
+  }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+<!-- NAV -->
+<nav class="no-print sticky top-0 z-50 backdrop-blur bg-white/85 border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-6">
+    <a href="#top" class="flex items-center gap-2 font-bold text-slate-900">
+      <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-cyan-400 flex items-center justify-center text-white text-sm">CM</span>
+      <span>Clickmart · Benchmark</span>
+    </a>
+    <div class="hidden md:flex items-center gap-1 text-sm text-slate-600 ml-auto">
+      <a href="#resumen"   class="px-3 py-1.5 rounded hover:bg-slate-100">Resumen</a>
+      <a href="#web"       class="px-3 py-1.5 rounded hover:bg-slate-100">Web</a>
+      <a href="#seo"       class="px-3 py-1.5 rounded hover:bg-slate-100">SEO &amp; Google</a>
+      <a href="#redes"     class="px-3 py-1.5 rounded hover:bg-slate-100">Redes</a>
+      <a href="#meta"      class="px-3 py-1.5 rounded hover:bg-slate-100">Meta Ads</a>
+      <a href="#hallazgos" class="px-3 py-1.5 rounded hover:bg-slate-100">Hallazgos</a>
+      <a href="#plan"      class="px-3 py-1.5 rounded hover:bg-slate-100">Plan 30/60/90</a>
+    </div>
+    <button onclick="window.print()" class="text-xs bg-slate-900 text-white px-3 py-1.5 rounded hover:bg-slate-700">Imprimir / PDF</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="grad-hero text-white">
+  <div class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+    <div class="flex items-center gap-2 mb-4">
+      <span class="chip bg-white/10 text-cyan-200 border border-cyan-300/20">Reporte confidencial · Julio 2026</span>
+      <span class="chip bg-white/10 text-white/80 border border-white/10">Sector: Asistencia de viaje internacional · Ecuador</span>
+    </div>
+    <h1 class="text-3xl md:text-5xl font-bold leading-tight max-w-4xl">Benchmark de marca <span class="text-cyan-300">Clickmart</span> vs. la competencia digital ecuatoriana</h1>
+    <p class="mt-4 text-white/80 max-w-3xl text-lg">Diagnóstico integral de sitio web, presencia en Google, redes sociales y campañas Meta Ads de Clickmart frente a los 4 competidores relevantes: <strong class="text-white">Assist Card</strong>, <strong class="text-white">Universal Assistance</strong>, <strong class="text-white">GO! Assistance</strong> y <strong class="text-white">Seguro de Viaje Mundial</strong>.</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-10">
+      <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+        <div class="text-xs uppercase tracking-wider text-cyan-200">Spend Meta 30d</div>
+        <div class="mt-1 text-3xl font-bold kpi-num">$668</div>
+        <div class="text-xs text-white/60 mt-1">3 campañas activas</div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+        <div class="text-xs uppercase tracking-wider text-cyan-200">Impresiones 30d</div>
+        <div class="mt-1 text-3xl font-bold kpi-num">936K</div>
+        <div class="text-xs text-white/60 mt-1">323K personas alcanzadas</div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+        <div class="text-xs uppercase tracking-wider text-orange-200">Eventos de conversión</div>
+        <div class="mt-1 text-3xl font-bold kpi-num">0</div>
+        <div class="text-xs text-white/60 mt-1">Solo PageView en píxel</div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+        <div class="text-xs uppercase tracking-wider text-orange-200">Indexación Google</div>
+        <div class="mt-1 text-3xl font-bold kpi-num">0</div>
+        <div class="text-xs text-white/60 mt-1">Cero URLs indexadas</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- RESUMEN EJECUTIVO -->
+<section id="resumen" class="sec-anchor max-w-7xl mx-auto px-4 py-14">
+  <div class="flex items-end justify-between gap-4 flex-wrap mb-6">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold">Resumen ejecutivo</h2>
+      <p class="text-slate-600 mt-1">Los 6 hallazgos que definen la posición competitiva de Clickmart hoy.</p>
+    </div>
+    <div class="flex items-center gap-3 text-xs text-slate-500">
+      <span class="chip semaforo-v">🟢 Fortaleza</span>
+      <span class="chip semaforo-a">🟡 Oportunidad</span>
+      <span class="chip semaforo-r">🔴 Crítico</span>
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <!-- H1 -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+      <div class="flex items-center justify-between mb-2">
+        <span class="chip semaforo-r">🔴 Crítico</span>
+        <span class="text-xs text-slate-400">01 · Tracking</span>
+      </div>
+      <h3 class="font-bold text-lg">El píxel de Meta solo dispara <span class="text-red-600">PageView</span></h3>
+      <p class="text-sm text-slate-600 mt-2">En 24 h se recibieron <strong>299 PageViews</strong> y ningún evento estándar (Lead, Purchase, InitiateCheckout). Todas las campañas están volando a ciegas: no hay optimización por conversión, ni retargeting real, ni valor atribuible.</p>
+    </div>
+    <!-- H2 -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+      <div class="flex items-center justify-between mb-2">
+        <span class="chip semaforo-r">🔴 Crítico</span>
+        <span class="text-xs text-slate-400">02 · SEO</span>
+      </div>
+      <h3 class="font-bold text-lg">Cero indexación en Google</h3>
+      <p class="text-sm text-slate-600 mt-2">La búsqueda <code>site:clickmart.com.ec</code> devuelve <strong>0 resultados</strong>. El sitio es una SPA React sin SSR: Google recibe un shell de 2,8 KB sin contenido. El sitemap declara solo 2 URLs.</p>
+    </div>
+    <!-- H3 -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+      <div class="flex items-center justify-between mb-2">
+        <span class="chip semaforo-r">🔴 Crítico</span>
+        <span class="text-xs text-slate-400">03 · Objetivos</span>
+      </div>
+      <h3 class="font-bold text-lg">Ninguna campaña está optimizada a compra</h3>
+      <p class="text-sm text-slate-600 mt-2">Las 3 campañas activas se optimizan a <strong>tráfico o interacción</strong>. La de "Perfil IG" gastó $299 y generó <strong>1 sola landing page view</strong>. El presupuesto no se traduce en cotizaciones medibles.</p>
+    </div>
+    <!-- H4 -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+      <div class="flex items-center justify-between mb-2">
+        <span class="chip semaforo-r">🔴 Crítico</span>
+        <span class="text-xs text-slate-400">04 · Marca</span>
+      </div>
+      <h3 class="font-bold text-lg">Presencia social oficial no verificable</h3>
+      <p class="text-sm text-slate-600 mt-2">No se encontró Instagram, Facebook, TikTok ni LinkedIn públicos asociados a <code>clickmart.com.ec</code>. Los 4 competidores tienen presencia multicanal con 17 K a 273 K seguidores en Instagram.</p>
+    </div>
+    <!-- H5 -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+      <div class="flex items-center justify-between mb-2">
+        <span class="chip semaforo-a">🟡 Oportunidad</span>
+        <span class="text-xs text-slate-400">05 · CPM/CTR</span>
+      </div>
+      <h3 class="font-bold text-lg">Costos de medios saludables</h3>
+      <p class="text-sm text-slate-600 mt-2">CPM promedio $0,76, CTR 2,05 %, CPC $0,03. El tráfico se compra barato — el problema no es el costo del click, es que no hay medición ni conversión aguas abajo.</p>
+    </div>
+    <!-- H6 -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+      <div class="flex items-center justify-between mb-2">
+        <span class="chip semaforo-a">🟡 Oportunidad</span>
+        <span class="text-xs text-slate-400">06 · Producto</span>
+      </div>
+      <h3 class="font-bold text-lg">Cotizador online instalado</h3>
+      <p class="text-sm text-slate-600 mt-2">Clickmart ya tiene cotizador (<code>/cotizar</code>). Con eventos de píxel bien instalados (ViewContent, Lead, Purchase) puede pasar de tráfico a performance real en 2 semanas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WEB COMPARATIVO -->
+<section id="web" class="sec-anchor bg-white border-y border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold">1 · Auditoría web comparativa</h2>
+    <p class="text-slate-600 mt-1 max-w-3xl">Cinco sitios evaluados en framework, arquitectura, SEO on-page, tracking y peso. Clickmart es la única SPA sin SSR del grupo.</p>
+
+    <!-- Tabla comparativa -->
+    <div class="overflow-x-auto mt-8 rounded-xl border border-slate-200 shadow-sm">
+      <table class="cmp w-full min-w-[900px] bg-white">
+        <thead>
+          <tr>
+            <th>Métrica</th>
+            <th class="!bg-blue-50 !text-blue-900">Clickmart</th>
+            <th>Assist Card</th>
+            <th>Universal Assist.</th>
+            <th>GO! Assistance</th>
+            <th>Seguro Viaje Mundial</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-semibold">Framework</td>
+            <td class="!bg-blue-50/40">React SPA (Vite)</td>
+            <td>Custom SSR</td>
+            <td>WordPress</td>
+            <td>Joomla + Gantry5</td>
+            <td>Next.js (SSR)</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">Renderizado</td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 SPA sin SSR</span></td>
+            <td><span class="chip semaforo-v">🟢 SSR</span></td>
+            <td><span class="chip semaforo-v">🟢 SSR</span></td>
+            <td><span class="chip semaforo-v">🟢 SSR</span></td>
+            <td><span class="chip semaforo-v">🟢 SSR</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold">HTML entregado</td>
+            <td class="!bg-blue-50/40">2,8 KB (shell vacío)</td>
+            <td>157 KB</td>
+            <td>225 KB</td>
+            <td>76 KB</td>
+            <td>435 KB</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">TTFB / Total</td>
+            <td class="!bg-blue-50/40">0,67 s / 0,67 s</td>
+            <td>0,78 s / 1,29 s</td>
+            <td>1,37 s / 1,40 s</td>
+            <td>0,98 s / 1,03 s</td>
+            <td>0,73 s / 1,14 s</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">Meta description</td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 Presente (headshell)</span></td>
+            <td>✅ 152 chars</td>
+            <td>✅ 158 chars</td>
+            <td>✅ 177 chars</td>
+            <td>✅ 137 chars</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">H1 en HTML server</td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 0</span></td>
+            <td>1</td>
+            <td>2 (anti-patrón)</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">JSON-LD Schema</td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 No</span></td>
+            <td>1 bloque</td>
+            <td>1 bloque</td>
+            <td><strong>4 bloques</strong></td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">hreflang</td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 0</span></td>
+            <td>34 tags</td>
+            <td>18 tags</td>
+            <td>11 tags</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">Open Graph image</td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 No</span></td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">Sitemap.xml</td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 Solo 2 URLs</span></td>
+            <td>✅ 110 URLs</td>
+            <td>❌ 404</td>
+            <td>❌ 404</td>
+            <td>✅ sitemap-index</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">Google Tag Manager</td>
+            <td class="!bg-blue-50/40">GTM-MQZ7VS95</td>
+            <td>GTM-PTDQ5X</td>
+            <td>GTM-TD6HC8Z</td>
+            <td>GTM-WZ79955 + GTM-5M34ZM5</td>
+            <td>GTM-KFJBRPP</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">Chat / WhatsApp</td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 No visible</span></td>
+            <td>WhatsApp</td>
+            <td>Crisp + WhatsApp</td>
+            <td>WhatsApp + Tel</td>
+            <td>WhatsApp</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">Blog / SEO content</td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 No</span></td>
+            <td>✅ Activo</td>
+            <td>✅ /uablog/</td>
+            <td>✅ /consejos-de-viaje/</td>
+            <td>❌ No</td>
+          </tr>
+          <tr>
+            <td class="font-semibold">Métodos de pago publicados</td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 No</span></td>
+            <td>No</td>
+            <td>No</td>
+            <td>✅ Visa/MC/Amex/PayPal/MP</td>
+            <td>Solo mención SSL</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Gráficos comparativos -->
+    <div class="grid md:grid-cols-2 gap-6 mt-10">
+      <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+        <h3 class="font-semibold mb-1">Peso del HTML server-rendered (KB)</h3>
+        <p class="text-xs text-slate-500 mb-3">Menor = más rápido, pero <em>si es SPA</em> es porque no hay contenido para el crawler.</p>
+        <canvas id="chartWeight" height="240"></canvas>
+      </div>
+      <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+        <h3 class="font-semibold mb-1">Salud SEO técnica (0–10)</h3>
+        <p class="text-xs text-slate-500 mb-3">Score compuesto: SSR, Schema, hreflang, sitemap, meta.</p>
+        <canvas id="chartSeoScore" height="240"></canvas>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SEO + GOOGLE -->
+<section id="seo" class="sec-anchor max-w-7xl mx-auto px-4 py-14">
+  <h2 class="text-2xl md:text-3xl font-bold">2 · Presencia en Google &amp; SEO</h2>
+  <p class="text-slate-600 mt-1 max-w-3xl">Cómo se ve Clickmart en el buscador que decide si un viajero encuentra o no la marca al cotizar seguro de viaje.</p>
+
+  <div class="grid md:grid-cols-3 gap-5 mt-8">
+    <div class="bg-red-50 border border-red-200 rounded-2xl p-5">
+      <div class="text-xs uppercase text-red-700 font-semibold">Indexación</div>
+      <div class="mt-2 text-4xl font-bold text-red-800">0</div>
+      <p class="text-sm text-red-700 mt-1">URLs de <code>clickmart.com.ec</code> en el índice de Google. La búsqueda <code>site:</code> no devuelve nada.</p>
+    </div>
+    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5">
+      <div class="text-xs uppercase text-amber-700 font-semibold">Cobertura del sitemap</div>
+      <div class="mt-2 text-4xl font-bold text-amber-800">2 URLs</div>
+      <p class="text-sm text-amber-700 mt-1"><code>/</code> y <code>/cotizar</code>. Assist Card declara 110. Nadie va a encontrarte por búsquedas long-tail.</p>
+    </div>
+    <div class="bg-red-50 border border-red-200 rounded-2xl p-5">
+      <div class="text-xs uppercase text-red-700 font-semibold">Contenido crawleable</div>
+      <div class="mt-2 text-4xl font-bold text-red-800">2,8 KB</div>
+      <p class="text-sm text-red-700 mt-1">El shell HTML no contiene ni un párrafo de contenido. Google necesita renderizar JS para ver algo.</p>
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-6 mt-8">
+    <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
+      <h3 class="font-semibold mb-1">Cobertura internacional (hreflang tags)</h3>
+      <p class="text-xs text-slate-500 mb-3">Fundamental para asistencia de viaje: cada país que declaras es una puerta de entrada extra.</p>
+      <canvas id="chartHreflang" height="220"></canvas>
+    </div>
+    <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
+      <h3 class="font-semibold mb-1">Datos estructurados (bloques JSON-LD)</h3>
+      <p class="text-xs text-slate-500 mb-3">Habilitan rich results (rating estrellas, precio, FAQ) en la SERP de Google.</p>
+      <canvas id="chartSchema" height="220"></canvas>
+    </div>
+  </div>
+
+  <div class="mt-8 bg-slate-900 text-white rounded-2xl p-6">
+    <h3 class="font-bold text-lg">¿Qué significa esto en la práctica?</h3>
+    <p class="text-sm text-white/80 mt-2">Cuando un viajero ecuatoriano escribe en Google "<em>asistencia de viaje internacional Ecuador</em>", "<em>seguro Schengen</em>" o "<em>asistencia médica al viajero</em>", <strong>Clickmart no aparece</strong>. El 100 % del tráfico digital hoy depende de la pauta paga en Meta. Cero cobertura orgánica = cero costo marginal negativo y máxima fragilidad ante subidas de CPM.</p>
+  </div>
+</section>
+
+<!-- REDES -->
+<section id="redes" class="sec-anchor bg-white border-y border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold">3 · Presencia en redes sociales</h2>
+    <p class="text-slate-600 mt-1 max-w-3xl">Foto del ecosistema social del sector. Las cifras provienen de perfiles públicos y snippets de búsqueda (última verificación julio 2026).</p>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-8">
+      <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+        <h3 class="font-semibold mb-1">Seguidores en Instagram</h3>
+        <p class="text-xs text-slate-500 mb-3">Cuenta principal (regional o local según la marca).</p>
+        <canvas id="chartIG" height="260"></canvas>
+      </div>
+      <div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+        <h3 class="font-semibold mb-1">Presencia por canal (matriz)</h3>
+        <p class="text-xs text-slate-500 mb-3">✅ = cuenta oficial identificada · — = no encontrada.</p>
+        <div class="overflow-x-auto">
+          <table class="cmp w-full text-sm">
+            <thead>
+              <tr>
+                <th>Marca</th><th>IG</th><th>FB</th><th>TikTok</th><th>YouTube</th><th>LinkedIn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="font-semibold">Clickmart</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td class="font-semibold">Assist Card</td><td>✅ 273 K</td><td>✅</td><td>✅</td><td>—</td><td>✅</td></tr>
+              <tr><td class="font-semibold">Universal Assist.</td><td>✅ 135 K</td><td>✅ 190 K</td><td>✅</td><td>✅</td><td>✅</td></tr>
+              <tr><td class="font-semibold">GO! Assistance</td><td>✅ 29 K</td><td>✅ 1,6 K</td><td>✅ 429</td><td>✅</td><td>✅</td></tr>
+              <tr><td class="font-semibold">Seguro Viaje Mundial</td><td>✅ 17 K</td><td>✅</td><td>✅ 1,9 K</td><td>✅</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-5">
+      <div class="bg-white border border-slate-200 rounded-xl p-5">
+        <div class="text-xs font-semibold text-slate-500 uppercase">Líder social</div>
+        <div class="text-lg font-bold mt-1">Assist Card &amp; Universal</div>
+        <p class="text-sm text-slate-600 mt-1">Assist Card domina Instagram (273 K). Universal domina Facebook (190 K likes) y es el único con presencia balanceada en TikTok + YouTube + LinkedIn.</p>
+      </div>
+      <div class="bg-white border border-slate-200 rounded-xl p-5">
+        <div class="text-xs font-semibold text-slate-500 uppercase">Local más consolidado</div>
+        <div class="text-lg font-bold mt-1">Seguro de Viaje Mundial</div>
+        <p class="text-sm text-slate-600 mt-1">El competidor local con más tracción social (17 K IG) y video corto (reels + TikTok con casos reales, alertas de estafas, tips). Es tu benchmark real de contenido.</p>
+      </div>
+      <div class="bg-white border border-slate-200 rounded-xl p-5">
+        <div class="text-xs font-semibold text-slate-500 uppercase">Oportunidad Clickmart</div>
+        <div class="text-lg font-bold mt-1">Terreno fértil</div>
+        <p class="text-sm text-slate-600 mt-1">GO! Assistance solo tiene 429 seguidores en TikTok y 1,6 K en FB. Hay espacio real para adelantarlo en 6-9 meses con un plan de contenido consistente.</p>
+      </div>
+    </div>
+
+    <details class="mt-8 bg-slate-50 rounded-xl p-5 border border-slate-200">
+      <summary class="font-semibold text-slate-900 flex items-center justify-between">
+        Tono de contenido dominante en el sector
+        <span class="text-xs text-slate-500">Expandir</span>
+      </summary>
+      <div class="mt-3 text-sm text-slate-700 prose-tight">
+        <p><strong>Assist Card</strong> — aspiracional-comercial con toques travel-lifestyle. Emojis, hashtags (#traveltok), promociones porcentuales con bancos.</p>
+        <p><strong>Universal Assistance</strong> — profesional cálido, respaldo Zurich, storytelling institucional + descuentos.</p>
+        <p><strong>GO! Assistance</strong> — cercano, explicativo (coberturas y planes), tips de destino prácticos.</p>
+        <p><strong>Seguro de Viaje Mundial</strong> — coloquial, tono ecuatoriano de clase media, formato reels/TikTok con alertas de estafas y casos reales.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- META ADS -->
+<section id="meta" class="sec-anchor max-w-7xl mx-auto px-4 py-14">
+  <h2 class="text-2xl md:text-3xl font-bold">4 · Auditoría de Meta Ads (Clickmart)</h2>
+  <p class="text-slate-600 mt-1 max-w-3xl">Cuenta <code>Clickmart ADS 2026</code> · últimos 30 días (20 jun – 19 jul 2026). Timezone America/Guayaquil. Moneda USD.</p>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+    <div class="bg-white rounded-xl border border-slate-200 p-4">
+      <div class="text-xs text-slate-500 uppercase">Inversión 30d</div>
+      <div class="text-2xl font-bold kpi-num mt-1">$668,66</div>
+      <div class="text-xs text-slate-500 mt-1">≈ $22 / día</div>
+    </div>
+    <div class="bg-white rounded-xl border border-slate-200 p-4">
+      <div class="text-xs text-slate-500 uppercase">Impresiones</div>
+      <div class="text-2xl font-bold kpi-num mt-1">936 499</div>
+      <div class="text-xs text-slate-500 mt-1">CPM $0,76</div>
+    </div>
+    <div class="bg-white rounded-xl border border-slate-200 p-4">
+      <div class="text-xs text-slate-500 uppercase">Clicks</div>
+      <div class="text-2xl font-bold kpi-num mt-1">19 237</div>
+      <div class="text-xs text-slate-500 mt-1">CTR 2,05 % · CPC $0,03</div>
+    </div>
+    <div class="bg-white rounded-xl border border-slate-200 p-4">
+      <div class="text-xs text-slate-500 uppercase">Landing page views</div>
+      <div class="text-2xl font-bold kpi-num mt-1">6 214</div>
+      <div class="text-xs text-slate-500 mt-1">Solo 33 % de los clicks llega al sitio</div>
+    </div>
+  </div>
+
+  <!-- Tabs Meta -->
+  <div x-data="{ tab: 'camp' }" class="mt-10">
+    <div class="flex gap-2 border-b border-slate-200 flex-wrap">
+      <button class="tab-btn px-4 py-2 text-sm font-medium rounded-t-lg border border-transparent"
+              :aria-selected="tab==='camp'" @click="tab='camp'">Campañas</button>
+      <button class="tab-btn px-4 py-2 text-sm font-medium rounded-t-lg border border-transparent"
+              :aria-selected="tab==='pixel'" @click="tab='pixel'">Píxel &amp; eventos</button>
+      <button class="tab-btn px-4 py-2 text-sm font-medium rounded-t-lg border border-transparent"
+              :aria-selected="tab==='estructura'" @click="tab='estructura'">Estructura de cuenta</button>
+    </div>
+
+    <div class="border border-t-0 border-slate-200 rounded-b-xl bg-white p-5">
+
+      <!-- CAMPAÑAS -->
+      <div x-show="tab==='camp'" x-cloak>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold mb-2">Gasto y volumen por campaña (30 d)</h4>
+            <canvas id="chartCamp" height="260"></canvas>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-2">Eficiencia de embudo por campaña</h4>
+            <p class="text-xs text-slate-500 mb-3">Ratio Landing page view / Link click. Ideal &gt; 70 %.</p>
+            <canvas id="chartFunnel" height="260"></canvas>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto mt-8 rounded-xl border border-slate-200">
+          <table class="cmp w-full min-w-[900px]">
+            <thead>
+              <tr>
+                <th>Campaña</th>
+                <th>Objetivo</th>
+                <th>Spend</th>
+                <th>Impr.</th>
+                <th>CPM</th>
+                <th>Clicks</th>
+                <th>CTR</th>
+                <th>LPV</th>
+                <th>Diagnóstico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-semibold">Tráfico Cotizador</td>
+                <td>OUTCOME_TRAFFIC</td>
+                <td>$354,90</td>
+                <td>409 674</td>
+                <td>$0,87</td>
+                <td>8 942</td>
+                <td>2,18 %</td>
+                <td>6 209</td>
+                <td><span class="chip semaforo-a">🟡 Trae tráfico, pero sin conversión medida</span></td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Perfil IG</td>
+                <td>OUTCOME_TRAFFIC (→ IG)</td>
+                <td>$299,49</td>
+                <td>509 893</td>
+                <td>$0,59</td>
+                <td>10 267</td>
+                <td>2,01 %</td>
+                <td>1</td>
+                <td><span class="chip semaforo-r">🔴 45 % del budget hacia IG, 0 LPV al sitio</span></td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Interacción post</td>
+                <td>OUTCOME_ENGAGEMENT</td>
+                <td>$14,27</td>
+                <td>16 932</td>
+                <td>$0,84</td>
+                <td>28</td>
+                <td>0,17 %</td>
+                <td>4</td>
+                <td><span class="chip semaforo-a">🟡 Budget testimonial ($2/día)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-6 bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900">
+          <strong>Lectura clave.</strong> Casi la mitad del budget mensual ($299 de $668) financia una campaña que envía tráfico al perfil de Instagram y no al sitio (solo 1 LPV en 30 días). En un negocio donde la conversión ocurre en el cotizador web, ese gasto es difícil de justificar sin un objetivo comercial claro (crecer comunidad, generar leads DM, etc.).
+        </div>
+      </div>
+
+      <!-- PIXEL -->
+      <div x-show="tab==='pixel'" x-cloak>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold mb-2">Eventos disparados por el píxel (últimas 24 h)</h4>
+            <canvas id="chartPixel" height="240"></canvas>
+          </div>
+          <div class="bg-red-50 border border-red-200 rounded-xl p-5">
+            <span class="chip semaforo-r">🔴 Crítico</span>
+            <h4 class="font-bold mt-2">Píxel <code>4624343074460372</code> · Clickmart</h4>
+            <p class="text-sm text-red-900 mt-2">En 24 h se registraron <strong>299 PageView</strong> y <strong>0 eventos de valor</strong> (Lead, InitiateCheckout, Purchase, ViewContent, AddPaymentInfo, etc.).</p>
+            <p class="text-sm text-red-900 mt-2">Consecuencias directas:</p>
+            <ul class="list-disc ml-5 mt-1 text-sm text-red-900 space-y-1">
+              <li>Meta no puede optimizar por conversión (falta señal).</li>
+              <li>Ninguna audiencia de retargeting basada en intención (cotizadores abandonados, checkout incompleto).</li>
+              <li>No se puede reportar ROAS, CPL ni tasa de conversión.</li>
+              <li>Los <code>tracking_specs</code> de los ads apuntan a <code>onsite_conversion</code> con conversion IDs que <em>no están activos</em> en el sitio — configuración huérfana.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-6 bg-slate-900 text-white rounded-xl p-5">
+          <h4 class="font-semibold">Fix priorizado (semana 1)</h4>
+          <ol class="list-decimal ml-5 mt-2 text-sm text-white/85 space-y-1">
+            <li>Instalar <strong>ViewContent</strong> al cargar <code>/cotizar</code> con parámetros (destino, días, edad).</li>
+            <li>Instalar <strong>InitiateCheckout</strong> al pasar del cotizador a la selección de plan.</li>
+            <li>Instalar <strong>Purchase</strong> con <code>value</code>, <code>currency=USD</code> y <code>content_ids</code> del plan.</li>
+            <li>Habilitar <strong>Conversions API</strong> (server-side) desde el backend — reduce pérdida por AdBlockers y iOS 14+.</li>
+            <li>Migrar campaña "Tráfico Cotizador" a <strong>OUTCOME_SALES</strong> optimizada a Purchase, con ventana 7d click / 1d view.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- ESTRUCTURA -->
+      <div x-show="tab==='estructura'" x-cloak>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+            <div class="text-xs uppercase text-slate-500">Campañas activas</div>
+            <div class="text-3xl font-bold mt-1">3</div>
+            <p class="text-xs text-slate-500 mt-1">2 tráfico + 1 engagement</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+            <div class="text-xs uppercase text-slate-500">Ad sets activos</div>
+            <div class="text-3xl font-bold mt-1">4</div>
+            <p class="text-xs text-slate-500 mt-1">Budget total $32 / día</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+            <div class="text-xs uppercase text-slate-500">Ads (activos / pausados)</div>
+            <div class="text-3xl font-bold mt-1">12 / 8</div>
+            <p class="text-xs text-slate-500 mt-1">20 anuncios en total</p>
+          </div>
+        </div>
+        <div class="mt-6 text-sm text-slate-700 prose-tight">
+          <p><strong>Nomenclatura:</strong> Uso de nombres genéricos ("Nuevo anuncio de Tráfico", "Cotizador 2", "Copia 3") que dificulta el reporting y A/B por segmento (audiencia, formato, hook, ubicación).</p>
+          <p><strong>Recomendación:</strong> Convención tipo <code>OBJ_CAMP_AUD_FORMATO_HOOK_v1</code> — p. ej. <code>SALES_Cotizador_Broad_Reel_Estafas_v1</code>.</p>
+          <p><strong>Presupuestos:</strong> 3 de 4 adsets con $10/día. Cuando existan eventos de conversión, migrar a <em>Advantage Campaign Budget (CBO)</em> con testing sistemático de audiencias broad vs interés.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HALLAZGOS -->
+<section id="hallazgos" class="sec-anchor bg-slate-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold">5 · Los 10 hallazgos priorizados</h2>
+    <p class="text-white/70 mt-1 max-w-3xl">Rankeados por impacto potencial en ventas. Cada uno con acción específica.</p>
+
+    <div class="mt-8 space-y-3">
+      <template x-data="{ items: [
+        { n:'01', color:'r', area:'Tracking', title:'Píxel solo dispara PageView', action:'Instalar ViewContent + InitiateCheckout + Purchase vía GTM esta semana. Añadir Conversions API server-side.' },
+        { n:'02', color:'r', area:'SEO', title:'Sitio no indexado en Google', action:'Migrar a SSR (Next.js o Astro) o pre-render las rutas principales. Emitir sitemap con 20+ URLs relevantes.' },
+        { n:'03', color:'r', area:'Meta', title:'Ninguna campaña optimizada a compra', action:'Cerrar campaña Perfil IG (o reasignar $10/d), abrir SALES con conversion Purchase, ventana 7d/1d.' },
+        { n:'04', color:'r', area:'Marca', title:'Presencia social pública no verificable', action:'Crear/validar cuentas oficiales @clickmart.ec en IG, FB, TikTok. Reclamar Google Business Profile.' },
+        { n:'05', color:'r', area:'CRO', title:'2 de cada 3 clicks pagos no llegan al sitio', action:'Auditar el enlace del ad, tiempo de carga móvil, banner de cookies y redirects. Meta el ratio LPV/Click a 65 %+.' },
+        { n:'06', color:'a', area:'Contenido', title:'Sin blog ni contenido SEO', action:'Publicar 8 artículos base: “Requisitos Schengen”, “Seguro Estados Unidos”, “Asistencia médica en Europa”, etc.' },
+        { n:'07', color:'a', area:'UX', title:'Sin chat / WhatsApp visible', action:'Implementar botón WhatsApp fijo (mismo formato que Assist Card / Universal). Habilitar API de WhatsApp Business.' },
+        { n:'08', color:'a', area:'Confianza', title:'Cero prueba social visible', action:'Publicar testimonios reales, sellos (SSL/PCI), alianzas con aerolíneas o agencias, casos de siniestros pagados.' },
+        { n:'09', color:'a', area:'Datos', title:'Nomenclatura de campañas inconsistente', action:'Adoptar convención OBJ_AUD_FORMATO_HOOK_v y aplicar retroactivamente para reporting comparable.' },
+        { n:'10', color:'v', area:'Costos', title:'CPM y CTR competitivos', action:'Mantener creativos ganadores y escalarlos cuando exista señal de conversión (no antes).' },
+      ]}"></template>
+      <!-- Lista estática (más portable y accesible que el x-for) -->
+      <div class="grid md:grid-cols-2 gap-3">
+        <!-- Card 1 -->
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-red-300 w-10">01</div>
+          <div><div class="flex items-center gap-2"><span class="chip semaforo-r">🔴 Tracking</span></div>
+            <div class="font-semibold mt-1">Píxel solo dispara PageView</div>
+            <div class="text-sm text-white/70 mt-1">Instalar ViewContent + InitiateCheckout + Purchase vía GTM esta semana. Añadir Conversions API server-side.</div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-red-300 w-10">02</div>
+          <div><div><span class="chip semaforo-r">🔴 SEO</span></div>
+            <div class="font-semibold mt-1">Sitio no indexado en Google</div>
+            <div class="text-sm text-white/70 mt-1">Migrar a SSR (Next.js/Astro) o pre-render de rutas principales. Emitir sitemap con 20+ URLs.</div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-red-300 w-10">03</div>
+          <div><div><span class="chip semaforo-r">🔴 Meta</span></div>
+            <div class="font-semibold mt-1">Ninguna campaña optimizada a compra</div>
+            <div class="text-sm text-white/70 mt-1">Reasignar el budget de Perfil IG a una campaña OUTCOME_SALES con evento Purchase, ventana 7d click / 1d view.</div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-red-300 w-10">04</div>
+          <div><div><span class="chip semaforo-r">🔴 Marca</span></div>
+            <div class="font-semibold mt-1">Presencia social oficial no verificable</div>
+            <div class="text-sm text-white/70 mt-1">Crear/validar @clickmart.ec en IG, FB, TikTok. Reclamar Google Business Profile con reviews.</div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-red-300 w-10">05</div>
+          <div><div><span class="chip semaforo-r">🔴 CRO</span></div>
+            <div class="font-semibold mt-1">2 de cada 3 clicks pagos no llegan al sitio</div>
+            <div class="text-sm text-white/70 mt-1">Auditar link del ad, LCP móvil, banner de cookies. Meta ratio LPV/Click ≥ 65 %.</div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-amber-300 w-10">06</div>
+          <div><div><span class="chip semaforo-a">🟡 Contenido</span></div>
+            <div class="font-semibold mt-1">Sin blog ni contenido SEO</div>
+            <div class="text-sm text-white/70 mt-1">Publicar 8 artículos base: “Requisitos Schengen”, “Seguro EE.UU.”, “Cobertura Galápagos”, etc.</div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-amber-300 w-10">07</div>
+          <div><div><span class="chip semaforo-a">🟡 UX</span></div>
+            <div class="font-semibold mt-1">Sin chat / WhatsApp visible</div>
+            <div class="text-sm text-white/70 mt-1">Implementar botón WhatsApp fijo con número business. Universal y GO! ya lo tienen.</div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-amber-300 w-10">08</div>
+          <div><div><span class="chip semaforo-a">🟡 Confianza</span></div>
+            <div class="font-semibold mt-1">Cero prueba social visible</div>
+            <div class="text-sm text-white/70 mt-1">Testimonios reales, sellos SSL/PCI, alianzas con aerolíneas, casos de siniestros pagados.</div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-amber-300 w-10">09</div>
+          <div><div><span class="chip semaforo-a">🟡 Datos</span></div>
+            <div class="font-semibold mt-1">Nomenclatura de campañas inconsistente</div>
+            <div class="text-sm text-white/70 mt-1">Adoptar convención <code>OBJ_AUD_FORMATO_HOOK_v</code> y aplicar retroactivamente.</div>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-green-300 w-10">10</div>
+          <div><div><span class="chip semaforo-v">🟢 Costos</span></div>
+            <div class="font-semibold mt-1">CPM y CTR competitivos</div>
+            <div class="text-sm text-white/70 mt-1">CPM $0,76 y CTR 2,05 % son sanos. Mantener creativos ganadores y escalarlos cuando exista señal de conversión.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PLAN 30/60/90 -->
+<section id="plan" class="sec-anchor max-w-7xl mx-auto px-4 py-14">
+  <h2 class="text-2xl md:text-3xl font-bold">6 · Plan de acción 30 / 60 / 90 días</h2>
+  <p class="text-slate-600 mt-1 max-w-3xl">Foco: convertir el gasto actual en resultados medibles antes de escalar. Sin métrica, no hay pauta.</p>
+
+  <div class="grid md:grid-cols-3 gap-5 mt-8">
+    <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+      <div class="flex items-center gap-2">
+        <span class="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">30</span>
+        <h3 class="font-bold">Estabilizar</h3>
+      </div>
+      <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc ml-5">
+        <li>Instalar eventos de conversión en el píxel (ViewContent / IC / Purchase).</li>
+        <li>Habilitar Conversions API server-side.</li>
+        <li>Cerrar o reformular la campaña <em>Perfil IG</em>.</li>
+        <li>Abrir campaña <strong>OUTCOME_SALES</strong> con budget $10/día como test.</li>
+        <li>Reclamar Google Business Profile.</li>
+        <li>Crear/validar cuentas oficiales en IG, FB, TikTok.</li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+      <div class="flex items-center gap-2">
+        <span class="w-9 h-9 rounded-full bg-cyan-600 text-white flex items-center justify-center font-bold">60</span>
+        <h3 class="font-bold">Optimizar</h3>
+      </div>
+      <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc ml-5">
+        <li>Añadir SSR / pre-render a las 8 rutas principales (destinos + FAQ).</li>
+        <li>Emitir sitemap con 20+ URLs y enviarlo a Search Console.</li>
+        <li>Publicar los primeros 4 artículos SEO ("Requisitos Schengen", "Seguro EE.UU.", "Cobertura Galápagos", "¿Qué cubre una asistencia?").</li>
+        <li>Instalar botón WhatsApp fijo.</li>
+        <li>Publicar 3 reels/semana en IG + TikTok (formato SVM: tips + alertas + casos reales).</li>
+        <li>Lanzar audiencias de retargeting (visitantes 30d, IC no compra).</li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+      <div class="flex items-center gap-2">
+        <span class="w-9 h-9 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold">90</span>
+        <h3 class="font-bold">Escalar</h3>
+      </div>
+      <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc ml-5">
+        <li>CBO + ABO híbrido con audiencias validadas por CPL.</li>
+        <li>Ampliar a Google Ads (Performance Max + Search por destino).</li>
+        <li>Añadir prueba social: 10 testimonios + sellos + alianzas visibles.</li>
+        <li>Añadir formulario "Cotización empresarial" (B2B agencias/aerolíneas).</li>
+        <li>Programa de referidos con código único (medible en píxel).</li>
+        <li>Meta trimestre: CPL &lt; $6 y ratio LPV/Click ≥ 65 %.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-10 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-2xl p-6">
+    <h3 class="font-bold text-lg">Impacto esperado</h3>
+    <p class="text-sm text-white/90 mt-2">Con el fix de píxel (semana 1) + optimización a Purchase (semana 3), esperamos pasar de <strong>0 conversiones medidas</strong> a un <strong>CPL trazable entre $4 y $8</strong> en un plazo de 45–60 días, manteniendo el mismo budget mensual. La cobertura orgánica (SEO + redes) da su primer retorno visible entre 90 y 180 días.</p>
+  </div>
+</section>
+
+<!-- METODOLOGÍA -->
+<section class="max-w-7xl mx-auto px-4 pb-14">
+  <details class="bg-white rounded-2xl border border-slate-200 p-5">
+    <summary class="font-semibold flex justify-between items-center">
+      Metodología y fuentes
+      <span class="text-xs text-slate-500">Expandir</span>
+    </summary>
+    <div class="mt-3 text-sm text-slate-700 prose-tight">
+      <p><strong>Datos de Meta Ads:</strong> Extraídos vía Meta Marketing API oficial (cuenta <code>act_948316490944757</code>), rango 2026-06-20 → 2026-07-19. Métricas normalizadas con archetype "hybrid".</p>
+      <p><strong>Datos del píxel:</strong> Endpoint <code>/activities</code> del pixel <code>4624343074460372</code>, ventana últimas 24 h.</p>
+      <p><strong>Auditoría web:</strong> HTML raw descargado con curl (UA de navegador) sobre las 5 URLs objetivo. Análisis de meta tags, sitemap, robots, tracking scripts. PageSpeed API pública devolvió 429 (rate limit sin API key) — pendiente re-ejecución con clave Google Cloud.</p>
+      <p><strong>Datos sociales:</strong> Búsqueda web + snippets de perfiles públicos. Instagram bloquea scraping HTML, cifras aproximadas.</p>
+      <p><strong>Indexación Google:</strong> Consulta <code>site:clickmart.com.ec</code> vía búsqueda web pública.</p>
+      <p><strong>Fecha del reporte:</strong> 20 de julio de 2026.</p>
+    </div>
+  </details>
+</section>
+
+<footer class="bg-slate-900 text-white/60 py-8 text-center text-sm">
+  <div class="max-w-7xl mx-auto px-4">
+    Reporte generado por Next Level Media · Julio 2026 · Confidencial
+  </div>
+</footer>
+
+<script>
+  // Config global de Chart.js
+  Chart.defaults.font.family = "'Inter', -apple-system, BlinkMacSystemFont, sans-serif";
+  Chart.defaults.color = '#334155';
+  Chart.defaults.borderColor = '#E2E8F0';
+
+  const brands  = ['Clickmart','Assist Card','Universal Assist.','GO! Assistance','Seguro Viaje Mundial'];
+  const brandColors = ['#2563EB','#EF4444','#F59E0B','#8B5CF6','#10B981'];
+
+  // 1. HTML weight
+  new Chart(document.getElementById('chartWeight'), {
+    type: 'bar',
+    data: {
+      labels: brands,
+      datasets: [{
+        label: 'HTML entregado (KB)',
+        data: [2.8, 157, 225, 76, 435],
+        backgroundColor: brandColors,
+        borderRadius: 6
+      }]
+    },
+    options: { plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true, title:{display:true,text:'KB'} } } }
+  });
+
+  // 2. SEO score compuesto (subjective 0-10)
+  // Basado en: SSR(3) + Schema(2) + hreflang(2) + sitemap(2) + meta_desc/H1(1)
+  new Chart(document.getElementById('chartSeoScore'), {
+    type: 'bar',
+    data: {
+      labels: brands,
+      datasets: [{
+        label: 'SEO técnico (0-10)',
+        data: [1, 8, 6, 8, 6],
+        backgroundColor: brandColors,
+        borderRadius: 6
+      }]
+    },
+    options: { plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true, max:10 } } }
+  });
+
+  // 3. Hreflang
+  new Chart(document.getElementById('chartHreflang'), {
+    type: 'bar',
+    data: {
+      labels: brands,
+      datasets: [{
+        label: 'Etiquetas hreflang',
+        data: [0, 34, 18, 11, 0],
+        backgroundColor: brandColors,
+        borderRadius: 6
+      }]
+    },
+    options: { indexAxis:'y', plugins:{ legend:{ display:false } } }
+  });
+
+  // 4. Schema JSON-LD
+  new Chart(document.getElementById('chartSchema'), {
+    type: 'bar',
+    data: {
+      labels: brands,
+      datasets: [{
+        label: 'Bloques JSON-LD',
+        data: [0, 1, 1, 4, 0],
+        backgroundColor: brandColors,
+        borderRadius: 6
+      }]
+    },
+    options: { indexAxis:'y', plugins:{ legend:{ display:false } }, scales:{ x:{ beginAtZero:true, max:5 } } }
+  });
+
+  // 5. Instagram followers
+  new Chart(document.getElementById('chartIG'), {
+    type: 'bar',
+    data: {
+      labels: brands,
+      datasets: [{
+        label: 'Seguidores IG (miles)',
+        data: [0, 273, 135, 29, 17],
+        backgroundColor: brandColors,
+        borderRadius: 6
+      }]
+    },
+    options: {
+      plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label:(ctx)=> ctx.parsed.y + ' K seguidores' } } },
+      scales:{ y:{ beginAtZero:true, title:{display:true,text:'K seguidores'} } }
+    }
+  });
+
+  // 6. Camp spend + impressions (dual axis)
+  new Chart(document.getElementById('chartCamp'), {
+    type: 'bar',
+    data: {
+      labels: ['Tráfico Cotizador','Perfil IG','Interacción post'],
+      datasets: [
+        { label:'Spend (USD)', data:[354.90, 299.49, 14.27], backgroundColor:'#2563EB', yAxisID:'y', borderRadius:6 },
+        { label:'Impresiones (K)', data:[409.7, 509.9, 16.9], backgroundColor:'#22D3EE', yAxisID:'y1', borderRadius:6 },
+      ]
+    },
+    options: {
+      scales:{
+        y:{ position:'left',  title:{display:true,text:'USD'} },
+        y1:{ position:'right', grid:{ drawOnChartArea:false }, title:{display:true,text:'K impresiones'} }
+      }
+    }
+  });
+
+  // 7. Funnel ratio LPV / link click
+  new Chart(document.getElementById('chartFunnel'), {
+    type: 'bar',
+    data: {
+      labels: ['Tráfico Cotizador','Perfil IG','Interacción post'],
+      datasets: [{
+        label:'LPV / Link Click (%)',
+        data:[ (6209/8461*100).toFixed(1), (1/9208*100).toFixed(3), (4/15*100).toFixed(1) ],
+        backgroundColor:['#10B981','#EF4444','#F59E0B'],
+        borderRadius:6
+      }]
+    },
+    options: {
+      plugins:{ legend:{ display:false } },
+      scales:{ y:{ beginAtZero:true, max:100, title:{display:true,text:'% clicks que llegan al sitio'} } }
+    }
+  });
+
+  // 8. Pixel events donut
+  new Chart(document.getElementById('chartPixel'), {
+    type: 'doughnut',
+    data: {
+      labels: ['PageView (299)','Lead (0)','InitiateCheckout (0)','Purchase (0)'],
+      datasets: [{
+        data: [299, 0, 0, 0],
+        backgroundColor: ['#2563EB','#94A3B8','#94A3B8','#94A3B8']
+      }]
+    },
+    options: { plugins:{ legend:{ position:'bottom' } } }
+  });
+
+  // Alpine class toggle for aria-selected initial state
+  document.addEventListener('alpine:init', () => {});
+</script>
+
+</body>
+</html>
