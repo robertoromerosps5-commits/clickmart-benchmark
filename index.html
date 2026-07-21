@@ -181,6 +181,86 @@
     <h2 class="text-2xl md:text-3xl font-bold">1 · Auditoría web comparativa</h2>
     <p class="text-slate-600 mt-1 max-w-3xl">Cinco sitios evaluados en framework, arquitectura, SEO on-page, tracking y peso. Clickmart es la única SPA sin SSR del grupo.</p>
 
+    <!-- STAGING PREVIEW -->
+    <div class="mt-8 bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl p-6">
+      <div class="flex items-start justify-between flex-wrap gap-3">
+        <div>
+          <span class="chip bg-blue-600 text-white">🆕 Actualización · staging</span>
+          <h3 class="font-bold text-lg mt-2">Nuevo build detectado en CloudFront</h3>
+          <p class="text-sm text-slate-700 mt-1 max-w-2xl">Se identificó un preview del nuevo sitio en <code>d2qykriw7eifed.cloudfront.net</code>. Es una <strong>versión mejorada</strong> del actual, aún en SPA React, con avances de rendering pero sin cerrar los gaps de SEO estructural.</p>
+        </div>
+        <a href="https://d2qykriw7eifed.cloudfront.net/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-sm bg-white text-blue-700 border border-blue-300 px-4 py-2 rounded-lg hover:bg-blue-50">
+          Ver preview
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4 mt-5">
+        <!-- Mejoras -->
+        <div class="bg-white rounded-xl border border-emerald-200 p-4">
+          <h4 class="font-semibold text-emerald-800 flex items-center gap-2"><span>✅</span> Mejoras confirmadas vs sitio actual</h4>
+          <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-5">
+            <li><strong>HTML pasa de 2,8 KB → 9,8 KB</strong>: incluye CSS crítico inline (design tokens Grayscale + Orange 500 <code>#fd7a17</code>).</li>
+            <li><strong>Preload de imágenes hero</strong>: <code>slides-01.webp</code> y <code>fondo-cliente-1.webp</code> con <code>fetchpriority="high"</code> → impacto directo en LCP.</li>
+            <li><strong>WebP</strong> como formato de imágenes → menor peso vs JPG/PNG.</li>
+            <li><strong>CSS diferido async</strong> (<code>data-deferred-css</code>) para no bloquear el primer render.</li>
+            <li><strong>Header sticky con backdrop-blur</strong> y hero grid moderno (0.9fr / 1.1fr).</li>
+            <li>Co-branding visible: aparece un logo <code>landing-edesk-logo</code> junto a Clickmart en el header.</li>
+          </ul>
+        </div>
+        <!-- Persisten -->
+        <div class="bg-white rounded-xl border border-red-200 p-4">
+          <h4 class="font-semibold text-red-800 flex items-center gap-2"><span>❌</span> Problemas que persisten sin resolver</h4>
+          <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-5">
+            <li>Sigue siendo <strong>SPA React sin SSR</strong> — Google recibe shell con CSS pero sin contenido de negocio.</li>
+            <li><strong>Sitemap idéntico</strong>: sólo <code>/</code> y <code>/cotizar</code>.</li>
+            <li><strong>Sin JSON-LD Schema</strong> (Organization, Product, FAQ, BreadcrumbList).</li>
+            <li><strong>Sin hreflang</strong> — cero declaración de mercado EC vs otros países.</li>
+            <li><strong>Sin <code>og:image</code></strong> → shares en WhatsApp/FB salen sin preview visual.</li>
+            <li><strong>Mismo GTM</strong> (<code>GTM-MQZ7VS95</code>) → el problema del píxel solo con PageView se traslada tal cual al nuevo build.</li>
+            <li>Título / description / canonical <strong>idénticos</strong>: sigue diciendo "Clickmart" (no unifica marca con ClickTravel de los ads).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Comparativa métricas actual vs staging -->
+      <div class="mt-5 bg-white rounded-xl border border-slate-200 overflow-x-auto">
+        <table class="cmp w-full min-w-[700px]">
+          <thead>
+            <tr>
+              <th>Métrica</th>
+              <th>Producción (clickmart.com.ec)</th>
+              <th>Staging (CloudFront)</th>
+              <th>Delta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="font-semibold">HTML entregado</td><td>2,8 KB</td><td>9,8 KB</td><td><span class="chip semaforo-v">+7 KB CSS crítico</span></td></tr>
+            <tr><td class="font-semibold">TTFB</td><td>0,67 s</td><td>0,76 s</td><td><span class="chip semaforo-a">+0,09 s</span></td></tr>
+            <tr><td class="font-semibold">Preload de hero</td><td>—</td><td>2 imágenes WebP</td><td><span class="chip semaforo-v">🟢 Mejora LCP</span></td></tr>
+            <tr><td class="font-semibold">CSS crítico inline</td><td>—</td><td>~6 KB</td><td><span class="chip semaforo-v">🟢 Bloqueo evitado</span></td></tr>
+            <tr><td class="font-semibold">SSR / prerender</td><td>❌</td><td>❌</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
+            <tr><td class="font-semibold">Sitemap</td><td>2 URLs</td><td>2 URLs</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
+            <tr><td class="font-semibold">JSON-LD</td><td>❌</td><td>❌</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
+            <tr><td class="font-semibold">hreflang</td><td>❌</td><td>❌</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
+            <tr><td class="font-semibold">og:image</td><td>❌</td><td>❌</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
+            <tr><td class="font-semibold">GTM</td><td>GTM-MQZ7VS95</td><td>GTM-MQZ7VS95</td><td><span class="chip semaforo-a">🟡 Mismo (píxel PageView-only)</span></td></tr>
+            <tr><td class="font-semibold">Branding</td><td>"Clickmart"</td><td>"Clickmart" + eDesk co-brand</td><td><span class="chip semaforo-a">🟡 4ª marca en la mezcla</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-5 bg-amber-50 border-l-4 border-amber-500 rounded-lg p-4 text-sm text-amber-900">
+        <strong>Lectura ejecutiva.</strong> El nuevo build es un salto claro en <em>experiencia de carga</em> (CSS crítico inline, WebP con preload, backdrop-blur) — el primer pintado va a verse más rápido y más moderno. Pero <strong>ninguno de los 5 problemas críticos de indexación se resuelve</strong>: si se publica tal cual, Clickmart seguirá invisible en Google. La ganancia real está a un paso — habilitar prerender o SSR para las rutas <code>/</code>, <code>/cotizar</code>, <code>/planes/&lt;destino&gt;</code>, <code>/faq</code> y añadir un sitemap con 20+ URLs. Vite + <code>vite-plugin-ssr</code> o migrar a Next.js/Astro son los caminos limpios.
+      </div>
+
+      <div class="mt-4 bg-red-50 border-l-4 border-red-500 rounded-lg p-4 text-sm text-red-900">
+        <strong>Bandera de marca.</strong> El header del nuevo build muestra <strong>Clickmart + eDesk</strong> lado a lado (elemento <code>landing-edesk-logo</code>). Esto añade una <strong>cuarta identidad</strong> al ecosistema ya fragmentado (Clickmart / ClickMart Page / ClickTravel ads / @clicktravel.ec + @clickmart_ec + eDesk). Antes de lanzar a producción hay que definir qué representa eDesk (proveedor tecnológico, marca hermana, co-branding B2B) y si debe ser visible al viajero final o no.
+      </div>
+    </div>
+
+
     <!-- Tabla comparativa -->
     <div class="overflow-x-auto mt-8 rounded-xl border border-slate-200 shadow-sm">
       <table class="cmp w-full min-w-[900px] bg-white">
@@ -824,9 +904,9 @@
   <!-- Mapa de marca fragmentada -->
   <div class="mt-8 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
     <h3 class="font-bold text-lg">Ecosistema de marca actual (fragmentado)</h3>
-    <p class="text-sm text-slate-600 mt-1">Hoy el negocio existe simultáneamente bajo <strong>3 nombres distintos</strong> en 4 canales — cada uno le habla al usuario con una identidad diferente.</p>
+    <p class="text-sm text-slate-600 mt-1">Hoy el negocio existe simultáneamente bajo <strong>4 nombres distintos</strong> en 5 canales — cada uno le habla al usuario con una identidad diferente. El nuevo build en staging añade un 5º elemento (eDesk).</p>
 
-    <div class="grid md:grid-cols-4 gap-3 mt-5">
+    <div class="grid md:grid-cols-5 gap-3 mt-5">
       <div class="border border-slate-200 rounded-xl p-4 bg-slate-50">
         <div class="text-xs uppercase text-slate-500 font-semibold">Dominio web</div>
         <div class="mt-1 font-bold text-slate-900">clickmart.com.ec</div>
@@ -846,6 +926,11 @@
         <div class="text-xs uppercase text-slate-500 font-semibold">Instagram</div>
         <div class="mt-1 font-bold text-slate-900">2 cuentas 😬</div>
         <div class="text-xs text-slate-500 mt-1"><a href="https://www.instagram.com/clicktravel.ec/" target="_blank" class="text-blue-600 hover:underline">@clicktravel.ec</a> + <a href="https://www.instagram.com/clickmart_ec/" target="_blank" class="text-blue-600 hover:underline">@clickmart_ec</a></div>
+      </div>
+      <div class="border border-amber-300 rounded-xl p-4 bg-amber-50">
+        <div class="text-xs uppercase text-amber-700 font-semibold">Nuevo build (staging)</div>
+        <div class="mt-1 font-bold text-amber-900">eDesk (co-brand)</div>
+        <div class="text-xs text-amber-700 mt-1">Logo visible en el header junto a Clickmart</div>
       </div>
     </div>
 
