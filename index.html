@@ -60,7 +60,6 @@
       <a href="#redes"     class="px-3 py-1.5 rounded hover:bg-slate-100">Redes</a>
       <a href="#meta"      class="px-3 py-1.5 rounded hover:bg-slate-100">Meta Ads</a>
       <a href="#anuncios"  class="px-3 py-1.5 rounded hover:bg-slate-100">Anuncios</a>
-      <a href="#organico"  class="px-3 py-1.5 rounded hover:bg-slate-100">Orgánico</a>
       <a href="#hallazgos" class="px-3 py-1.5 rounded hover:bg-slate-100">Hallazgos</a>
       <a href="#plan"      class="px-3 py-1.5 rounded hover:bg-slate-100">Plan 30/60/90</a>
     </div>
@@ -896,120 +895,10 @@
   </div>
 </section>
 
-<!-- CONTENIDO ORGÁNICO -->
-<section id="organico" class="sec-anchor max-w-7xl mx-auto px-4 py-14">
-  <h2 class="text-2xl md:text-3xl font-bold">6 · Contenido orgánico &amp; ecosistema de marca</h2>
-  <p class="text-slate-600 mt-1 max-w-3xl">Auditoría de la huella orgánica del cliente y del branding multi-canal.</p>
-
-  <!-- Mapa de marca fragmentada -->
-  <div class="mt-8 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-    <h3 class="font-bold text-lg">Ecosistema de marca actual (fragmentado)</h3>
-    <p class="text-sm text-slate-600 mt-1">Hoy el negocio existe simultáneamente bajo <strong>4 nombres distintos</strong> en 5 canales — cada uno le habla al usuario con una identidad diferente. El nuevo build en staging añade un 5º elemento (eDesk).</p>
-
-    <div class="grid md:grid-cols-5 gap-3 mt-5">
-      <div class="border border-slate-200 rounded-xl p-4 bg-slate-50">
-        <div class="text-xs uppercase text-slate-500 font-semibold">Dominio web</div>
-        <div class="mt-1 font-bold text-slate-900">clickmart.com.ec</div>
-        <div class="text-xs text-slate-500 mt-1">Marca visible: <strong>Clickmart</strong></div>
-      </div>
-      <div class="border border-slate-200 rounded-xl p-4 bg-slate-50">
-        <div class="text-xs uppercase text-slate-500 font-semibold">Facebook Page</div>
-        <div class="mt-1 font-bold text-slate-900">ClickMart</div>
-        <div class="text-xs text-slate-500 mt-1">ID <code>973602579180367</code></div>
-      </div>
-      <div class="border border-slate-200 rounded-xl p-4 bg-slate-50">
-        <div class="text-xs uppercase text-slate-500 font-semibold">Ad copy</div>
-        <div class="mt-1 font-bold text-slate-900">ClickTravel</div>
-        <div class="text-xs text-slate-500 mt-1">12 de 12 ads mencionan esta marca</div>
-      </div>
-      <div class="border border-slate-200 rounded-xl p-4 bg-slate-50">
-        <div class="text-xs uppercase text-slate-500 font-semibold">Instagram</div>
-        <div class="mt-1 font-bold text-slate-900">2 cuentas 😬</div>
-        <div class="text-xs text-slate-500 mt-1"><a href="https://www.instagram.com/clicktravel.ec/" target="_blank" class="text-blue-600 hover:underline">@clicktravel.ec</a> + <a href="https://www.instagram.com/clickmart_ec/" target="_blank" class="text-blue-600 hover:underline">@clickmart_ec</a></div>
-      </div>
-      <div class="border border-amber-300 rounded-xl p-4 bg-amber-50">
-        <div class="text-xs uppercase text-amber-700 font-semibold">Nuevo build (staging)</div>
-        <div class="mt-1 font-bold text-amber-900">eDesk (co-brand)</div>
-        <div class="text-xs text-amber-700 mt-1">Logo visible en el header junto a Clickmart</div>
-      </div>
-    </div>
-
-    <div class="mt-6 bg-red-50 border-l-4 border-red-500 rounded-lg p-4 text-sm text-red-900">
-      <strong>Riesgo comercial.</strong> Un usuario que interactúa con la marca en distintos touchpoints ve tres nombres diferentes. Esto afecta: (a) recall, (b) confianza al pagar en el checkout, (c) capacidad de generar reviews consolidadas en Google Business, (d) SEO (autoridad de marca dispersa).
-    </div>
-  </div>
-
-  <!-- Top 3 contenido orgánico -->
-  <div class="mt-8 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-    <div class="flex items-start justify-between flex-wrap gap-3">
-      <div>
-        <h3 class="font-bold text-lg">Top 3 contenido orgánico</h3>
-        <p class="text-sm text-slate-600 mt-1">Los 3 posts orgánicos con mejor rendimiento en las cuentas del cliente.</p>
-      </div>
-      <span class="chip semaforo-a">🟡 Pendiente de acceso</span>
-    </div>
-
-    <div class="mt-5 bg-amber-50 border border-amber-200 rounded-lg p-4">
-      <h4 class="font-semibold text-amber-900">Por qué esta sección no está poblada aún</h4>
-      <p class="text-sm text-amber-900 mt-2">Meta bloquea el scraping público del feed de la Page y del perfil de Instagram (grid, likes, views, comentarios). Para poblar el <strong>Top 3 orgánico</strong> con datos reales hay dos caminos:</p>
-      <ol class="list-decimal ml-5 mt-2 text-sm text-amber-900 space-y-1">
-        <li><strong>Vía Graph API (recomendado):</strong> el cliente conecta su Page y su cuenta de IG Business al Business Manager al que ya tenemos acceso. Con eso podemos leer <code>/page_id/posts</code> con <code>likes.summary(true)</code>, <code>comments.summary(true)</code>, <code>shares</code> e <code>insights.metric(post_impressions,post_video_views)</code>.</li>
-        <li><strong>Manual (rápido):</strong> el cliente comparte un screenshot de los 3 posts con mejor rendimiento del último trimestre desde Meta Business Suite → Contenido → Ordenar por Alcance/Engagement.</li>
-      </ol>
-      <p class="text-sm text-amber-900 mt-3">En cuanto tengamos el acceso o los screenshots, actualizo esta sección en un nuevo commit y regeneramos el reporte.</p>
-    </div>
-
-    <!-- Placeholders visuales de estructura -->
-    <div class="grid md:grid-cols-3 gap-4 mt-6">
-      <div class="border-2 border-dashed border-slate-300 rounded-xl p-5 text-center bg-slate-50">
-        <div class="text-4xl">🥇</div>
-        <div class="mt-2 font-bold">Post #1</div>
-        <div class="text-xs text-slate-500 mt-1">Alcance · Likes · Comentarios · Guardados</div>
-        <div class="mt-3 text-xs text-slate-400">Pendiente de datos</div>
-      </div>
-      <div class="border-2 border-dashed border-slate-300 rounded-xl p-5 text-center bg-slate-50">
-        <div class="text-4xl">🥈</div>
-        <div class="mt-2 font-bold">Post #2</div>
-        <div class="text-xs text-slate-500 mt-1">Alcance · Likes · Comentarios · Guardados</div>
-        <div class="mt-3 text-xs text-slate-400">Pendiente de datos</div>
-      </div>
-      <div class="border-2 border-dashed border-slate-300 rounded-xl p-5 text-center bg-slate-50">
-        <div class="text-4xl">🥉</div>
-        <div class="mt-2 font-bold">Post #3</div>
-        <div class="text-xs text-slate-500 mt-1">Alcance · Likes · Comentarios · Guardados</div>
-        <div class="mt-3 text-xs text-slate-400">Pendiente de datos</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Referencia: contenido orgánico del competidor local -->
-  <div class="mt-8 bg-slate-900 text-white rounded-2xl p-6">
-    <h3 class="font-bold text-lg">Referencia: qué está funcionando en el sector</h3>
-    <p class="text-sm text-white/80 mt-1">Mientras poblamos el propio, benchmark rápido del competidor local con mejor tracción orgánica: <strong>Seguro de Viaje Mundial</strong> (17 K seguidores IG, activo en TikTok y YouTube).</p>
-    <div class="grid md:grid-cols-3 gap-3 mt-5">
-      <div class="bg-white/5 border border-white/10 rounded-xl p-4">
-        <div class="text-xs uppercase text-cyan-200 font-semibold">Formato dominante</div>
-        <div class="font-bold mt-1">Reel vertical 30–45s</div>
-        <div class="text-xs text-white/70 mt-1">Con texto grande sobre video B-roll de destinos.</div>
-      </div>
-      <div class="bg-white/5 border border-white/10 rounded-xl p-4">
-        <div class="text-xs uppercase text-cyan-200 font-semibold">Hooks que funcionan</div>
-        <div class="font-bold mt-1">Alertas + casos reales</div>
-        <div class="text-xs text-white/70 mt-1">"Le pasó a un ecuatoriano en…", "Cuidado con estas estafas al viajar a…"</div>
-      </div>
-      <div class="bg-white/5 border border-white/10 rounded-xl p-4">
-        <div class="text-xs uppercase text-cyan-200 font-semibold">Tono</div>
-        <div class="font-bold mt-1">Coloquial + educativo</div>
-        <div class="text-xs text-white/70 mt-1">Cercano al viajero de clase media EC. Emojis, léxico local.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- HALLAZGOS -->
 <section id="hallazgos" class="sec-anchor bg-slate-900 text-white">
   <div class="max-w-7xl mx-auto px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">7 · Los 10 hallazgos priorizados</h2>
+    <h2 class="text-2xl md:text-3xl font-bold">6 · Los 10 hallazgos priorizados</h2>
     <p class="text-white/70 mt-1 max-w-3xl">Rankeados por impacto potencial en ventas. Cada uno con acción específica.</p>
 
     <div class="mt-8 space-y-3">
@@ -1106,7 +995,7 @@
 
 <!-- PLAN 30/60/90 -->
 <section id="plan" class="sec-anchor max-w-7xl mx-auto px-4 py-14">
-  <h2 class="text-2xl md:text-3xl font-bold">8 · Plan de acción 30 / 60 / 90 días</h2>
+  <h2 class="text-2xl md:text-3xl font-bold">7 · Plan de acción 30 / 60 / 90 días</h2>
   <p class="text-slate-600 mt-1 max-w-3xl">Foco: convertir el gasto actual en resultados medibles antes de escalar. Sin métrica, no hay pauta.</p>
 
   <div class="grid md:grid-cols-3 gap-5 mt-8">
