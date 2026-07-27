@@ -94,9 +94,9 @@
         <div class="text-xs text-white/60 mt-1">Solo PageView en píxel</div>
       </div>
       <div class="bg-white/5 border border-white/10 rounded-xl p-4">
-        <div class="text-xs uppercase tracking-wider text-orange-200">Indexación Google</div>
-        <div class="mt-1 text-3xl font-bold kpi-num">0</div>
-        <div class="text-xs text-white/60 mt-1">Cero URLs indexadas</div>
+        <div class="text-xs uppercase tracking-wider text-cyan-200">SEO técnico del nuevo build</div>
+        <div class="mt-1 text-3xl font-bold kpi-num">7/10</div>
+        <div class="text-xs text-white/60 mt-1">SSG · H1 · Schema · hreflang · OG</div>
       </div>
     </div>
   </div>
@@ -127,13 +127,13 @@
       <p class="text-sm text-slate-600 mt-2">En 24 h se recibieron <strong>299 PageViews</strong> y ningún evento estándar (Lead, Purchase, InitiateCheckout). Todas las campañas están volando a ciegas: no hay optimización por conversión, ni retargeting real, ni valor atribuible.</p>
     </div>
     <!-- H2 -->
-    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+    <div class="bg-white rounded-2xl p-5 border border-emerald-200 shadow-sm">
       <div class="flex items-center justify-between mb-2">
-        <span class="chip semaforo-r">🔴 Crítico</span>
+        <span class="chip semaforo-v">🟢 Resuelto en staging</span>
         <span class="text-xs text-slate-400">02 · SEO</span>
       </div>
-      <h3 class="font-bold text-lg">Cero indexación en Google</h3>
-      <p class="text-sm text-slate-600 mt-2">La búsqueda <code>site:clickmart.com.ec</code> devuelve <strong>0 resultados</strong>. El sitio es una SPA React sin SSR: Google recibe un shell de 2,8 KB sin contenido. El sitemap declara solo 2 URLs.</p>
+      <h3 class="font-bold text-lg">El nuevo build cierra los gaps de SEO técnico</h3>
+      <p class="text-sm text-slate-600 mt-2">La versión en CloudFront resuelve SSR (SSG con contenido), H1, JSON-LD (Organization + WebSite + WebPage), hreflang (es-EC + x-default) y og:image. El siguiente paso es promoverlo a producción y enviar sitemap a Search Console.</p>
     </div>
     <!-- H3 -->
     <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
@@ -150,8 +150,8 @@
         <span class="chip semaforo-r">🔴 Crítico</span>
         <span class="text-xs text-slate-400">04 · Marca</span>
       </div>
-      <h3 class="font-bold text-lg">Marca fragmentada en 3 nombres</h3>
-      <p class="text-sm text-slate-600 mt-2">Web = <strong>Clickmart</strong> · Page FB = <strong>ClickMart</strong> · Ads = <strong>ClickTravel</strong> · IG = <strong>@clicktravel.ec + @clickmart_ec</strong>. Usuario ve tres marcas en el mismo embudo → duda, abandono y SEO/reviews dispersos.</p>
+      <h3 class="font-bold text-lg">Branding se multiplica: 6 marcas en la misma pantalla</h3>
+      <p class="text-sm text-slate-600 mt-2">En el nuevo build conviven <strong>ClickMart · ClickTravel · Edesk · Swiss Travel Assist · WTA by HAS · 48hoorass</strong>. Sumado a Page FB "ClickMart" y 2 IGs (@clicktravel.ec + @clickmart_ec), el ecosistema tiene 8 identidades distintas — hay que definir jerarquía antes del lanzamiento.</p>
     </div>
     <!-- H5 -->
     <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
@@ -180,82 +180,83 @@
     <h2 class="text-2xl md:text-3xl font-bold">1 · Auditoría web comparativa</h2>
     <p class="text-slate-600 mt-1 max-w-3xl">Cinco sitios evaluados en framework, arquitectura, SEO on-page, tracking y peso. Clickmart es la única SPA sin SSR del grupo.</p>
 
-    <!-- STAGING PREVIEW -->
-    <div class="mt-8 bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl p-6">
+    <!-- NUEVO BUILD — RE-EVALUACIÓN -->
+    <div class="mt-8 bg-gradient-to-r from-emerald-50 via-cyan-50 to-blue-50 border border-emerald-200 rounded-2xl p-6">
       <div class="flex items-start justify-between flex-wrap gap-3">
         <div>
-          <span class="chip bg-blue-600 text-white">🆕 Actualización · staging</span>
-          <h3 class="font-bold text-lg mt-2">Nuevo build detectado en CloudFront</h3>
-          <p class="text-sm text-slate-700 mt-1 max-w-2xl">Se identificó un preview del nuevo sitio en <code>d2qykriw7eifed.cloudfront.net</code>. Es una <strong>versión mejorada</strong> del actual, aún en SPA React, con avances de rendering pero sin cerrar los gaps de SEO estructural.</p>
+          <span class="chip bg-emerald-600 text-white">🚀 Re-evaluación</span>
+          <h3 class="font-bold text-lg mt-2">Nuevo build (staging) ya resuelve la mayoría de los gaps de SEO</h3>
+          <p class="text-sm text-slate-700 mt-1 max-w-3xl">La versión desplegada en <code>d2qykriw7eifed.cloudfront.net</code> es un <strong>rediseño completo con Static Site Generation (SSG)</strong>. El HTML crudo ya contiene contenido de negocio, H1, testimonios, partners y datos estructurados — el crawler de Google ya puede indexar sin renderizar JavaScript. Los principales hallazgos técnicos originales quedan cerrados. Quedan pendientes: sitemap por página de destino, píxel Meta con conversiones, unificación de marca y despliegue a producción.</p>
         </div>
         <a href="https://d2qykriw7eifed.cloudfront.net/" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 text-sm bg-white text-blue-700 border border-blue-300 px-4 py-2 rounded-lg hover:bg-blue-50">
-          Ver preview
+           class="inline-flex items-center gap-2 text-sm bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">
+          Ver nuevo build
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
         </a>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-4 mt-5">
-        <!-- Mejoras -->
+      <div class="grid md:grid-cols-2 gap-4 mt-6">
+        <!-- Resuelto -->
         <div class="bg-white rounded-xl border border-emerald-200 p-4">
-          <h4 class="font-semibold text-emerald-800 flex items-center gap-2"><span>✅</span> Mejoras confirmadas vs sitio actual</h4>
+          <h4 class="font-semibold text-emerald-800 flex items-center gap-2"><span>✅</span> Resuelto en el nuevo build</h4>
           <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-5">
-            <li><strong>HTML pasa de 2,8 KB → 9,8 KB</strong>: incluye CSS crítico inline (design tokens Grayscale + Orange 500 <code>#fd7a17</code>).</li>
-            <li><strong>Preload de imágenes hero</strong>: <code>slides-01.webp</code> y <code>fondo-cliente-1.webp</code> con <code>fetchpriority="high"</code> → impacto directo en LCP.</li>
-            <li><strong>WebP</strong> como formato de imágenes → menor peso vs JPG/PNG.</li>
-            <li><strong>CSS diferido async</strong> (<code>data-deferred-css</code>) para no bloquear el primer render.</li>
-            <li><strong>Header sticky con backdrop-blur</strong> y hero grid moderno (0.9fr / 1.1fr).</li>
-            <li>Co-branding visible: aparece un logo <code>landing-edesk-logo</code> junto a Clickmart en el header.</li>
+            <li><strong>HTML 2,8 KB → 21,8 KB</strong> con contenido pre-renderizado (SSG). El <code>&lt;div id="root"&gt;</code> ya viene poblado con la landing completa (<code>data-static-landing</code>).</li>
+            <li><strong>H1 real en HTML</strong>: "Todo comienza con un <em>ClickTravel</em>". 4 H2 estructurando el discurso (persuasión, cotizador, testimonios, contacto). 8 H3.</li>
+            <li><strong>JSON-LD Schema</strong> con grafo <code>@graph</code>: <code>Organization</code> + <code>WebSite</code> + <code>WebPage</code>. Habilita rich results en Google.</li>
+            <li><strong>hreflang</strong>: <code>es-EC</code> + <code>x-default</code> — mercado declarado.</li>
+            <li><strong>og:image + secure_url + type + alt</strong>: los shares en WhatsApp/FB ya renderizan preview visual ("Familia viajando protegida con ClickTravel").</li>
+            <li><strong>Prueba social pre-renderizada</strong>: 2 testimonios (Sofía Romero cliente, Armando Torres agente) con rating 5★ y copy real, indexables por Google.</li>
+            <li><strong>Partners visibles</strong>: Swiss Travel Assist, WTA by HAS, 48hoorass — respaldo institucional al fin comunicado.</li>
+            <li><strong>Preload de imágenes hero</strong> WebP con <code>fetchpriority="high"</code> → mejora LCP directa.</li>
+            <li><strong>Sitemap</strong> pasa de 2 → 4 URLs (<code>/</code>, <code>/cotizar</code>, <code>/clientes/login</code>, <code>/admin/login</code>).</li>
           </ul>
         </div>
-        <!-- Persisten -->
-        <div class="bg-white rounded-xl border border-red-200 p-4">
-          <h4 class="font-semibold text-red-800 flex items-center gap-2"><span>❌</span> Problemas que persisten sin resolver</h4>
+        <!-- Persiste -->
+        <div class="bg-white rounded-xl border border-amber-300 p-4">
+          <h4 class="font-semibold text-amber-800 flex items-center gap-2"><span>⚠️</span> Sigue pendiente</h4>
           <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-5">
-            <li>Sigue siendo <strong>SPA React sin SSR</strong> — Google recibe shell con CSS pero sin contenido de negocio.</li>
-            <li><strong>Sitemap idéntico</strong>: sólo <code>/</code> y <code>/cotizar</code>.</li>
-            <li><strong>Sin JSON-LD Schema</strong> (Organization, Product, FAQ, BreadcrumbList).</li>
-            <li><strong>Sin hreflang</strong> — cero declaración de mercado EC vs otros países.</li>
-            <li><strong>Sin <code>og:image</code></strong> → shares en WhatsApp/FB salen sin preview visual.</li>
-            <li><strong>Mismo GTM</strong> (<code>GTM-MQZ7VS95</code>) → el problema del píxel solo con PageView se traslada tal cual al nuevo build.</li>
-            <li>Título / description / canonical <strong>idénticos</strong>: sigue diciendo "Clickmart" (no unifica marca con ClickTravel de los ads).</li>
+            <li><strong>Aún no está en producción</strong>: <code>clickmart.com.ec</code> sigue sirviendo el SPA vacío. Todo este trabajo no impacta hasta el switch de DNS/CDN.</li>
+            <li><strong>Sitemap con solo 4 URLs</strong>: falta cobertura por destino (<code>/planes/eeuu</code>, <code>/planes/europa-schengen</code>, <code>/planes/galapagos</code>) y por intent (<code>/faq</code>, <code>/como-funciona</code>, <code>/blog</code>).</li>
+            <li><strong>Falta Schema Product / Service / FAQPage / BreadcrumbList</strong>: solo hay el Organization + WebSite/WebPage. Los planes de asistencia no tienen ficha estructurada.</li>
+            <li><strong>Píxel Meta sin cambios</strong>: sigue el mismo <code>GTM-MQZ7VS95</code> disparando solo <code>PageView</code>. El nuevo cotizador debe implementar <code>ViewContent</code>, <code>InitiateCheckout</code>, <code>Purchase</code>.</li>
+            <li><strong>Sin blog / contenido SEO</strong>: no hay artículos long-tail para captar búsquedas informacionales ("requisitos Schengen", "seguro Estados Unidos", etc.).</li>
+            <li><strong>Branding se multiplica en HTML</strong>: ahora conviven en la misma pantalla <em>ClickMart · ClickTravel · Edesk · Swiss Travel Assist · WTA by HAS · 48hoorass</em> = <strong>6 marcas visibles</strong>. Jerarquía visual pendiente de definir.</li>
           </ul>
         </div>
       </div>
 
-      <!-- Comparativa métricas actual vs staging -->
-      <div class="mt-5 bg-white rounded-xl border border-slate-200 overflow-x-auto">
+      <!-- Tabla producción vs staging (actualizada) -->
+      <div class="mt-6 bg-white rounded-xl border border-slate-200 overflow-x-auto">
         <table class="cmp w-full min-w-[700px]">
           <thead>
             <tr>
               <th>Métrica</th>
-              <th>Producción (clickmart.com.ec)</th>
-              <th>Staging (CloudFront)</th>
-              <th>Delta</th>
+              <th>Producción hoy (<code>clickmart.com.ec</code>)</th>
+              <th>Nuevo build (<code>CloudFront</code>)</th>
+              <th>Estado</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td class="font-semibold">HTML entregado</td><td>2,8 KB</td><td>9,8 KB</td><td><span class="chip semaforo-v">+7 KB CSS crítico</span></td></tr>
-            <tr><td class="font-semibold">TTFB</td><td>0,67 s</td><td>0,76 s</td><td><span class="chip semaforo-a">+0,09 s</span></td></tr>
-            <tr><td class="font-semibold">Preload de hero</td><td>—</td><td>2 imágenes WebP</td><td><span class="chip semaforo-v">🟢 Mejora LCP</span></td></tr>
-            <tr><td class="font-semibold">CSS crítico inline</td><td>—</td><td>~6 KB</td><td><span class="chip semaforo-v">🟢 Bloqueo evitado</span></td></tr>
-            <tr><td class="font-semibold">SSR / prerender</td><td>❌</td><td>❌</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
-            <tr><td class="font-semibold">Sitemap</td><td>2 URLs</td><td>2 URLs</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
-            <tr><td class="font-semibold">JSON-LD</td><td>❌</td><td>❌</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
-            <tr><td class="font-semibold">hreflang</td><td>❌</td><td>❌</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
-            <tr><td class="font-semibold">og:image</td><td>❌</td><td>❌</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
-            <tr><td class="font-semibold">GTM</td><td>GTM-MQZ7VS95</td><td>GTM-MQZ7VS95</td><td><span class="chip semaforo-a">🟡 Mismo (píxel PageView-only)</span></td></tr>
-            <tr><td class="font-semibold">Branding</td><td>"Clickmart"</td><td>"Clickmart" + eDesk co-brand</td><td><span class="chip semaforo-a">🟡 4ª marca en la mezcla</span></td></tr>
+            <tr><td class="font-semibold">HTML entregado</td><td>2,8 KB (shell vacío)</td><td>21,8 KB (SSG con contenido)</td><td><span class="chip semaforo-v">🟢 Resuelto</span></td></tr>
+            <tr><td class="font-semibold">Renderizado</td><td>SPA sin SSR</td><td>SSG (contenido pre-renderizado)</td><td><span class="chip semaforo-v">🟢 Resuelto</span></td></tr>
+            <tr><td class="font-semibold">H1 en HTML</td><td>0</td><td>1 ("Todo comienza con un ClickTravel")</td><td><span class="chip semaforo-v">🟢 Resuelto</span></td></tr>
+            <tr><td class="font-semibold">H2 / H3</td><td>0 / 0</td><td>4 / 8</td><td><span class="chip semaforo-v">🟢 Buena jerarquía</span></td></tr>
+            <tr><td class="font-semibold">JSON-LD Schema</td><td>❌</td><td>✅ Organization + WebSite + WebPage</td><td><span class="chip semaforo-v">🟢 Resuelto</span></td></tr>
+            <tr><td class="font-semibold">hreflang</td><td>❌</td><td>✅ es-EC + x-default</td><td><span class="chip semaforo-v">🟢 Resuelto</span></td></tr>
+            <tr><td class="font-semibold">og:image + alt</td><td>❌</td><td>✅ 4 tags</td><td><span class="chip semaforo-v">🟢 Resuelto</span></td></tr>
+            <tr><td class="font-semibold">Testimonios en HTML</td><td>0</td><td>2 (Sofía Romero, Armando Torres) 5★</td><td><span class="chip semaforo-v">🟢 Prueba social</span></td></tr>
+            <tr><td class="font-semibold">Partners visibles</td><td>0</td><td>Swiss Travel Assist · WTA by HAS · 48hoorass</td><td><span class="chip semaforo-v">🟢 Autoridad</span></td></tr>
+            <tr><td class="font-semibold">Sitemap</td><td>2 URLs</td><td>4 URLs</td><td><span class="chip semaforo-a">🟡 Insuficiente aún</span></td></tr>
+            <tr><td class="font-semibold">Blog / SEO content</td><td>❌</td><td>❌</td><td><span class="chip semaforo-a">🟡 Pendiente</span></td></tr>
+            <tr><td class="font-semibold">GTM / Píxel Meta</td><td>GTM-MQZ7VS95 · solo PageView</td><td>GTM-MQZ7VS95 · solo PageView</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
+            <tr><td class="font-semibold">Indexación Google</td><td>0 URLs</td><td>0 URLs (aún no promovido)</td><td><span class="chip semaforo-r">🔴 Requiere despliegue</span></td></tr>
+            <tr><td class="font-semibold">Branding en HTML</td><td>"Clickmart"</td><td>ClickMart + ClickTravel + Edesk + 3 partners</td><td><span class="chip semaforo-a">🟡 6 marcas visibles</span></td></tr>
           </tbody>
         </table>
       </div>
 
-      <div class="mt-5 bg-amber-50 border-l-4 border-amber-500 rounded-lg p-4 text-sm text-amber-900">
-        <strong>Lectura ejecutiva.</strong> El nuevo build es un salto claro en <em>experiencia de carga</em> (CSS crítico inline, WebP con preload, backdrop-blur) — el primer pintado va a verse más rápido y más moderno. Pero <strong>ninguno de los 5 problemas críticos de indexación se resuelve</strong>: si se publica tal cual, Clickmart seguirá invisible en Google. La ganancia real está a un paso — habilitar prerender o SSR para las rutas <code>/</code>, <code>/cotizar</code>, <code>/planes/&lt;destino&gt;</code>, <code>/faq</code> y añadir un sitemap con 20+ URLs. Vite + <code>vite-plugin-ssr</code> o migrar a Next.js/Astro son los caminos limpios.
-      </div>
-
-      <div class="mt-4 bg-red-50 border-l-4 border-red-500 rounded-lg p-4 text-sm text-red-900">
-        <strong>Bandera de marca.</strong> El header del nuevo build muestra <strong>Clickmart + eDesk</strong> lado a lado (elemento <code>landing-edesk-logo</code>). Esto añade una <strong>cuarta identidad</strong> al ecosistema ya fragmentado (Clickmart / ClickMart Page / ClickTravel ads / @clicktravel.ec + @clickmart_ec + eDesk). Antes de lanzar a producción hay que definir qué representa eDesk (proveedor tecnológico, marca hermana, co-branding B2B) y si debe ser visible al viajero final o no.
+      <div class="mt-5 bg-emerald-50 border-l-4 border-emerald-500 rounded-lg p-4 text-sm text-emerald-900">
+        <strong>Lectura ejecutiva.</strong> El nuevo build cierra la mayoría de los hallazgos técnicos de SEO on-page que documentamos al inicio del reporte. Es un salto cualitativo — pasamos de "invisible al crawler" a "sitio moderno con estructura semántica, datos estructurados, hreflang y prueba social pre-renderizada". <strong>El siguiente cuello de botella ya no es la web, es el despliegue + el píxel de Meta + la jerarquía de marca</strong>. Prioridad 1 esta semana: promover el nuevo build a <code>clickmart.com.ec</code>, activar eventos de conversión en el píxel y decidir el orden visual de las marcas en el hero.
       </div>
     </div>
 
@@ -276,7 +277,7 @@
         <tbody>
           <tr>
             <td class="font-semibold">Framework</td>
-            <td class="!bg-blue-50/40">React SPA (Vite)</td>
+            <td class="!bg-blue-50/40">React + Vite (SSG)</td>
             <td>Custom SSR</td>
             <td>WordPress</td>
             <td>Joomla + Gantry5</td>
@@ -284,7 +285,7 @@
           </tr>
           <tr>
             <td class="font-semibold">Renderizado</td>
-            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 SPA sin SSR</span></td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-v">🟢 SSG con contenido</span></td>
             <td><span class="chip semaforo-v">🟢 SSR</span></td>
             <td><span class="chip semaforo-v">🟢 SSR</span></td>
             <td><span class="chip semaforo-v">🟢 SSR</span></td>
@@ -292,7 +293,7 @@
           </tr>
           <tr>
             <td class="font-semibold">HTML entregado</td>
-            <td class="!bg-blue-50/40">2,8 KB (shell vacío)</td>
+            <td class="!bg-blue-50/40">21,8 KB</td>
             <td>157 KB</td>
             <td>225 KB</td>
             <td>76 KB</td>
@@ -300,7 +301,7 @@
           </tr>
           <tr>
             <td class="font-semibold">TTFB / Total</td>
-            <td class="!bg-blue-50/40">0,67 s / 0,67 s</td>
+            <td class="!bg-blue-50/40">0,43 s / 0,54 s</td>
             <td>0,78 s / 1,29 s</td>
             <td>1,37 s / 1,40 s</td>
             <td>0,98 s / 1,03 s</td>
@@ -308,7 +309,7 @@
           </tr>
           <tr>
             <td class="font-semibold">Meta description</td>
-            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 Presente (headshell)</span></td>
+            <td class="!bg-blue-50/40">✅ 108 chars</td>
             <td>✅ 152 chars</td>
             <td>✅ 158 chars</td>
             <td>✅ 177 chars</td>
@@ -316,7 +317,7 @@
           </tr>
           <tr>
             <td class="font-semibold">H1 en HTML server</td>
-            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 0</span></td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-v">🟢 1</span></td>
             <td>1</td>
             <td>2 (anti-patrón)</td>
             <td>1</td>
@@ -324,7 +325,7 @@
           </tr>
           <tr>
             <td class="font-semibold">JSON-LD Schema</td>
-            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 No</span></td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-v">🟢 1 bloque (Org+Site+Page)</span></td>
             <td>1 bloque</td>
             <td>1 bloque</td>
             <td><strong>4 bloques</strong></td>
@@ -332,7 +333,7 @@
           </tr>
           <tr>
             <td class="font-semibold">hreflang</td>
-            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 0</span></td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 2 tags (EC + default)</span></td>
             <td>34 tags</td>
             <td>18 tags</td>
             <td>11 tags</td>
@@ -340,7 +341,7 @@
           </tr>
           <tr>
             <td class="font-semibold">Open Graph image</td>
-            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 No</span></td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-v">🟢 4 tags (con alt)</span></td>
             <td>No</td>
             <td>No</td>
             <td>No</td>
@@ -348,7 +349,7 @@
           </tr>
           <tr>
             <td class="font-semibold">Sitemap.xml</td>
-            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 Solo 2 URLs</span></td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 4 URLs</span></td>
             <td>✅ 110 URLs</td>
             <td>❌ 404</td>
             <td>❌ 404</td>
@@ -372,7 +373,7 @@
           </tr>
           <tr>
             <td class="font-semibold">Blog / SEO content</td>
-            <td class="!bg-blue-50/40"><span class="chip semaforo-r">🔴 No</span></td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 Pendiente</span></td>
             <td>✅ Activo</td>
             <td>✅ /uablog/</td>
             <td>✅ /consejos-de-viaje/</td>
@@ -410,23 +411,23 @@
 <!-- SEO + GOOGLE -->
 <section id="seo" class="sec-anchor max-w-7xl mx-auto px-4 py-14">
   <h2 class="text-2xl md:text-3xl font-bold">2 · Presencia en Google &amp; SEO</h2>
-  <p class="text-slate-600 mt-1 max-w-3xl">Cómo se ve Clickmart en el buscador que decide si un viajero encuentra o no la marca al cotizar seguro de viaje.</p>
+  <p class="text-slate-600 mt-1 max-w-3xl">Cómo se ve Clickmart en el buscador que decide si un viajero encuentra o no la marca al cotizar seguro de viaje. Los valores reflejan el <strong>nuevo build listo para producción</strong>; el sitio en <code>clickmart.com.ec</code> aún sirve la versión anterior.</p>
 
   <div class="grid md:grid-cols-3 gap-5 mt-8">
     <div class="bg-red-50 border border-red-200 rounded-2xl p-5">
-      <div class="text-xs uppercase text-red-700 font-semibold">Indexación</div>
+      <div class="text-xs uppercase text-red-700 font-semibold">Indexación actual</div>
       <div class="mt-2 text-4xl font-bold text-red-800">0</div>
-      <p class="text-sm text-red-700 mt-1">URLs de <code>clickmart.com.ec</code> en el índice de Google. La búsqueda <code>site:</code> no devuelve nada.</p>
+      <p class="text-sm text-red-700 mt-1">URLs de <code>clickmart.com.ec</code> en el índice de Google. Se resuelve al promover el nuevo build + enviar sitemap a Search Console.</p>
     </div>
     <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5">
       <div class="text-xs uppercase text-amber-700 font-semibold">Cobertura del sitemap</div>
-      <div class="mt-2 text-4xl font-bold text-amber-800">2 URLs</div>
-      <p class="text-sm text-amber-700 mt-1"><code>/</code> y <code>/cotizar</code>. Assist Card declara 110. Nadie va a encontrarte por búsquedas long-tail.</p>
+      <div class="mt-2 text-4xl font-bold text-amber-800">4 URLs</div>
+      <p class="text-sm text-amber-700 mt-1">Sube de 2 a 4 (<code>/</code>, <code>/cotizar</code>, <code>/clientes/login</code>, <code>/admin/login</code>). Aún lejos de las 110 de Assist Card. Falta cobertura por destino/intent.</p>
     </div>
-    <div class="bg-red-50 border border-red-200 rounded-2xl p-5">
-      <div class="text-xs uppercase text-red-700 font-semibold">Contenido crawleable</div>
-      <div class="mt-2 text-4xl font-bold text-red-800">2,8 KB</div>
-      <p class="text-sm text-red-700 mt-1">El shell HTML no contiene ni un párrafo de contenido. Google necesita renderizar JS para ver algo.</p>
+    <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5">
+      <div class="text-xs uppercase text-emerald-700 font-semibold">Contenido crawleable</div>
+      <div class="mt-2 text-4xl font-bold text-emerald-800">21,8 KB</div>
+      <p class="text-sm text-emerald-700 mt-1">Pasa de 2,8 KB shell vacío → 21,8 KB con H1, H2, testimonios y partners pre-renderizados. Google ya puede indexar sin JS.</p>
     </div>
   </div>
 
@@ -445,7 +446,7 @@
 
   <div class="mt-8 bg-slate-900 text-white rounded-2xl p-6">
     <h3 class="font-bold text-lg">¿Qué significa esto en la práctica?</h3>
-    <p class="text-sm text-white/80 mt-2">Cuando un viajero ecuatoriano escribe en Google "<em>asistencia de viaje internacional Ecuador</em>", "<em>seguro Schengen</em>" o "<em>asistencia médica al viajero</em>", <strong>Clickmart no aparece</strong>. El 100 % del tráfico digital hoy depende de la pauta paga en Meta. Cero cobertura orgánica = cero costo marginal negativo y máxima fragilidad ante subidas de CPM.</p>
+    <p class="text-sm text-white/80 mt-2">Con la versión actual en producción, Clickmart no aparece cuando un viajero ecuatoriano busca "<em>asistencia de viaje internacional Ecuador</em>", "<em>seguro Schengen</em>" o "<em>asistencia médica al viajero</em>". <strong>Con el nuevo build promovido a producción</strong>, el sitio queda listo para ser indexado — pero eso solo abre la puerta: para <em>rankear</em> hacen falta 3 acciones concretas: (1) enviar el sitemap a Google Search Console, (2) ampliar el sitemap a mínimo 20 URLs con páginas por destino, y (3) lanzar 6–8 artículos long-tail que capturen intent informacional.</p>
   </div>
 </section>
 
@@ -924,11 +925,11 @@
             <div class="text-sm text-white/70 mt-1">Instalar ViewContent + InitiateCheckout + Purchase vía GTM esta semana. Añadir Conversions API server-side.</div>
           </div>
         </div>
-        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
-          <div class="text-2xl font-bold text-red-300 w-10">02</div>
-          <div><div><span class="chip semaforo-r">🔴 SEO</span></div>
-            <div class="font-semibold mt-1">Sitio no indexado en Google</div>
-            <div class="text-sm text-white/70 mt-1">Migrar a SSR (Next.js/Astro) o pre-render de rutas principales. Emitir sitemap con 20+ URLs.</div>
+        <div class="bg-white/5 border border-emerald-400/30 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-emerald-300 w-10">02</div>
+          <div><div><span class="chip semaforo-v">🟢 SEO técnico resuelto</span></div>
+            <div class="font-semibold mt-1">Nuevo build cierra SSR + H1 + Schema + hreflang + og:image</div>
+            <div class="text-sm text-white/70 mt-1">Promover el nuevo build a <code>clickmart.com.ec</code>, enviar sitemap a Search Console y ampliar sitemap a 20+ URLs (por destino / FAQ / blog).</div>
           </div>
         </div>
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
@@ -941,8 +942,8 @@
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
           <div class="text-2xl font-bold text-red-300 w-10">04</div>
           <div><div><span class="chip semaforo-r">🔴 Marca</span></div>
-            <div class="font-semibold mt-1">Branding fragmentado en 3 nombres (Clickmart · ClickMart · ClickTravel)</div>
-            <div class="text-sm text-white/70 mt-1">Unificar bajo un solo nombre (recomendado: <strong>ClickTravel</strong> por su claridad de categoría). Renombrar Page FB, consolidar las 2 cuentas IG en una, y añadir un banner en la web aclarando la relación durante la transición.</div>
+            <div class="font-semibold mt-1">6 marcas visibles en el hero del nuevo build</div>
+            <div class="text-sm text-white/70 mt-1">Definir jerarquía visual clara: <strong>ClickTravel</strong> como marca comercial principal (ya está en el H1), <strong>ClickMart</strong> como empresa/holding, <strong>Edesk</strong> minimizado o retirado del hero, y <strong>partners</strong> (Swiss Travel Assist, WTA, 48hoorass) agrupados en una sola sección "Respaldado por" con jerarquía secundaria.</div>
           </div>
         </div>
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
@@ -1002,30 +1003,33 @@
     <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
       <div class="flex items-center gap-2">
         <span class="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">30</span>
-        <h3 class="font-bold">Estabilizar</h3>
+        <h3 class="font-bold">Lanzar y estabilizar</h3>
       </div>
       <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc ml-5">
-        <li>Instalar eventos de conversión en el píxel (ViewContent / IC / Purchase).</li>
-        <li>Habilitar Conversions API server-side.</li>
-        <li>Cerrar o reformular la campaña <em>Perfil IG</em>.</li>
-        <li>Abrir campaña <strong>OUTCOME_SALES</strong> con budget $10/día como test.</li>
-        <li>Reclamar Google Business Profile.</li>
-        <li>Crear/validar cuentas oficiales en IG, FB, TikTok.</li>
+        <li><strong>Promover el nuevo build</strong> (CloudFront) a <code>clickmart.com.ec</code> como versión oficial.</li>
+        <li>Enviar el <code>sitemap.xml</code> a <strong>Google Search Console</strong> y solicitar indexación de las 4 URLs.</li>
+        <li>Instalar eventos de conversión en el píxel (<strong>ViewContent / InitiateCheckout / Purchase</strong>) vía GTM.</li>
+        <li>Habilitar <strong>Conversions API server-side</strong>.</li>
+        <li>Cerrar o reformular la campaña <em>Perfil IG</em> ($299/mes sin retorno al sitio).</li>
+        <li>Abrir campaña <strong>OUTCOME_SALES</strong> optimizada a Purchase con $10/día de test.</li>
+        <li>Reclamar <strong>Google Business Profile</strong> y crear/validar cuentas oficiales en IG, FB, TikTok.</li>
+        <li>Definir jerarquía de marca: <strong>ClickTravel</strong> como marca comercial (ya está en el H1), consolidar las 2 cuentas IG.</li>
       </ul>
     </div>
 
     <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
       <div class="flex items-center gap-2">
         <span class="w-9 h-9 rounded-full bg-cyan-600 text-white flex items-center justify-center font-bold">60</span>
-        <h3 class="font-bold">Optimizar</h3>
+        <h3 class="font-bold">Ampliar y optimizar</h3>
       </div>
       <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc ml-5">
-        <li>Añadir SSR / pre-render a las 8 rutas principales (destinos + FAQ).</li>
-        <li>Emitir sitemap con 20+ URLs y enviarlo a Search Console.</li>
+        <li><strong>Ampliar el sitemap a 20+ URLs</strong>: crear páginas por destino (<code>/planes/eeuu</code>, <code>/planes/europa-schengen</code>, <code>/planes/galapagos</code>) y de intent (<code>/faq</code>, <code>/como-funciona</code>).</li>
+        <li>Añadir <strong>JSON-LD adicional</strong>: Service / Product por plan, FAQPage, BreadcrumbList.</li>
         <li>Publicar los primeros 4 artículos SEO ("Requisitos Schengen", "Seguro EE.UU.", "Cobertura Galápagos", "¿Qué cubre una asistencia?").</li>
-        <li>Instalar botón WhatsApp fijo.</li>
+        <li>Instalar <strong>botón WhatsApp fijo</strong> (paridad con Universal, GO! y Assist Card).</li>
+        <li>Producir <strong>6–8 hooks creativos nuevos</strong> × 3 formatos (imagen, carrusel, reel) para reemplazar las 3 imágenes actuales.</li>
         <li>Publicar 3 reels/semana en IG + TikTok (formato SVM: tips + alertas + casos reales).</li>
-        <li>Lanzar audiencias de retargeting (visitantes 30d, IC no compra).</li>
+        <li>Lanzar audiencias de retargeting (visitantes 30d, IC sin compra).</li>
       </ul>
     </div>
 
@@ -1036,18 +1040,18 @@
       </div>
       <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc ml-5">
         <li>CBO + ABO híbrido con audiencias validadas por CPL.</li>
-        <li>Ampliar a Google Ads (Performance Max + Search por destino).</li>
-        <li>Añadir prueba social: 10 testimonios + sellos + alianzas visibles.</li>
-        <li>Añadir formulario "Cotización empresarial" (B2B agencias/aerolíneas).</li>
+        <li>Ampliar a Google Ads (Performance Max + Search por destino) apalancando el nuevo SEO.</li>
+        <li>Escalar prueba social: pasar de 2 → 10 testimonios, sumar reviews de Google Business.</li>
+        <li>Añadir <strong>formulario B2B</strong> (agencias / aerolíneas / brokers).</li>
         <li>Programa de referidos con código único (medible en píxel).</li>
-        <li>Meta trimestre: CPL &lt; $6 y ratio LPV/Click ≥ 65 %.</li>
+        <li>Meta trimestre: <strong>CPL &lt; $6</strong>, <strong>ratio LPV/Click ≥ 65 %</strong> y <strong>≥ 100 URLs indexadas</strong> en Google.</li>
       </ul>
     </div>
   </div>
 
   <div class="mt-10 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-2xl p-6">
     <h3 class="font-bold text-lg">Impacto esperado</h3>
-    <p class="text-sm text-white/90 mt-2">Con el fix de píxel (semana 1) + optimización a Purchase (semana 3), esperamos pasar de <strong>0 conversiones medidas</strong> a un <strong>CPL trazable entre $4 y $8</strong> en un plazo de 45–60 días, manteniendo el mismo budget mensual. La cobertura orgánica (SEO + redes) da su primer retorno visible entre 90 y 180 días.</p>
+    <p class="text-sm text-white/90 mt-2">Con el nuevo build promovido + fix de píxel (semana 1) + optimización a Purchase (semana 3), esperamos pasar de <strong>0 conversiones medidas</strong> a un <strong>CPL trazable entre $4 y $8</strong> en 45–60 días manteniendo el budget mensual. La cobertura orgánica ya arranca desde una base sana (SSG + Schema + hreflang) — las primeras impresiones en Google deberían aparecer en 2–4 semanas post-lanzamiento, y el primer tráfico orgánico consistente entre 90 y 180 días.</p>
   </div>
 </section>
 
@@ -1084,14 +1088,14 @@
   const brands  = ['Clickmart','Assist Card','Universal Assist.','GO! Assistance','Seguro Viaje Mundial'];
   const brandColors = ['#2563EB','#EF4444','#F59E0B','#8B5CF6','#10B981'];
 
-  // 1. HTML weight
+  // 1. HTML weight (nuevo build)
   new Chart(document.getElementById('chartWeight'), {
     type: 'bar',
     data: {
       labels: brands,
       datasets: [{
         label: 'HTML entregado (KB)',
-        data: [2.8, 157, 225, 76, 435],
+        data: [21.8, 157, 225, 76, 435],
         backgroundColor: brandColors,
         borderRadius: 6
       }]
@@ -1099,7 +1103,7 @@
     options: { plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true, title:{display:true,text:'KB'} } } }
   });
 
-  // 2. SEO score compuesto (subjective 0-10)
+  // 2. SEO score compuesto (subjective 0-10) — con nuevo build Clickmart pasa de 1 a 7
   // Basado en: SSR(3) + Schema(2) + hreflang(2) + sitemap(2) + meta_desc/H1(1)
   new Chart(document.getElementById('chartSeoScore'), {
     type: 'bar',
@@ -1107,7 +1111,7 @@
       labels: brands,
       datasets: [{
         label: 'SEO técnico (0-10)',
-        data: [1, 8, 6, 8, 6],
+        data: [7, 8, 6, 8, 6],
         backgroundColor: brandColors,
         borderRadius: 6
       }]
@@ -1115,14 +1119,14 @@
     options: { plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true, max:10 } } }
   });
 
-  // 3. Hreflang
+  // 3. Hreflang (Clickmart pasa 0 → 2)
   new Chart(document.getElementById('chartHreflang'), {
     type: 'bar',
     data: {
       labels: brands,
       datasets: [{
         label: 'Etiquetas hreflang',
-        data: [0, 34, 18, 11, 0],
+        data: [2, 34, 18, 11, 0],
         backgroundColor: brandColors,
         borderRadius: 6
       }]
@@ -1130,14 +1134,14 @@
     options: { indexAxis:'y', plugins:{ legend:{ display:false } } }
   });
 
-  // 4. Schema JSON-LD
+  // 4. Schema JSON-LD (Clickmart pasa 0 → 1)
   new Chart(document.getElementById('chartSchema'), {
     type: 'bar',
     data: {
       labels: brands,
       datasets: [{
         label: 'Bloques JSON-LD',
-        data: [0, 1, 1, 4, 0],
+        data: [1, 1, 1, 4, 0],
         backgroundColor: brandColors,
         borderRadius: 6
       }]
