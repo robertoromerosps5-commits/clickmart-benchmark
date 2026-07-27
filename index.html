@@ -132,7 +132,7 @@
         <span class="chip semaforo-v">🟢 Resuelto en staging</span>
         <span class="text-xs text-slate-400">02 · SEO</span>
       </div>
-      <h3 class="font-bold text-lg">Nuevo build en producción desde el 23-jul</h3>
+      <h3 class="font-bold text-lg">Nuevo build en producción</h3>
       <p class="text-sm text-slate-600 mt-2">SSG con H1, JSON-LD, hreflang y og:image ya sirviendo tráfico real en <code>clickmart.com.ec</code>. Falta activar la indexación en Search Console y resolver 4 gaps de infraestructura (DNS www, cache CloudFront, headers de seguridad, sitemap ampliado).</p>
     </div>
     <!-- H3 -->
@@ -177,7 +177,7 @@
         <div>
           <span class="chip bg-emerald-600 text-white">✅ EN PRODUCCIÓN</span>
           <h3 class="font-bold text-lg mt-2">Nuevo build desplegado en <code>clickmart.com.ec</code></h3>
-          <p class="text-sm text-slate-700 mt-1 max-w-3xl">Deploy confirmado el <strong>23 de julio de 2026</strong> (<code>Last-Modified: Thu, 23 Jul 2026 18:00:27 GMT</code>). Servido desde <strong>AWS CloudFront + S3</strong> con edge en Bogotá (BOG51-P3) — latencia excelente para tráfico ecuatoriano. El rediseño con <strong>Static Site Generation (SSG)</strong> ya resuelve los gaps técnicos de SEO on-page.</p>
+          <p class="text-sm text-slate-700 mt-1 max-w-3xl">Última verificación el <strong>27 de julio de 2026</strong>. Servido desde <strong>AWS CloudFront + S3</strong> con edge en Bogotá (BOG51-P3) — latencia excelente para tráfico ecuatoriano. El rediseño con <strong>Static Site Generation (SSG)</strong> ya resuelve los gaps técnicos de SEO on-page.</p>
         </div>
         <a href="https://clickmart.com.ec/" target="_blank" rel="noopener"
            class="inline-flex items-center gap-2 text-sm bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">
@@ -211,7 +211,6 @@
             <li><strong>Falta Schema Product / Service / FAQPage / BreadcrumbList</strong>: solo hay el Organization + WebSite/WebPage. Los planes de asistencia no tienen ficha estructurada.</li>
             <li><strong>Píxel Meta sin cambios</strong>: sigue el mismo <code>GTM-MQZ7VS95</code> disparando solo <code>PageView</code>. El nuevo cotizador debe implementar <code>ViewContent</code>, <code>InitiateCheckout</code>, <code>Purchase</code>.</li>
             <li><strong>Sin blog / contenido SEO</strong>: no hay artículos long-tail para captar búsquedas informacionales ("requisitos Schengen", "seguro Estados Unidos", etc.).</li>
-            <li><strong>Branding se multiplica en HTML</strong>: ahora conviven en la misma pantalla <em>ClickMart · ClickTravel · Edesk · Swiss Travel Assist · WTA by HAS · 48hoorass</em> = <strong>6 marcas visibles</strong>. Jerarquía visual pendiente de definir.</li>
           </ul>
         </div>
       </div>
@@ -240,8 +239,7 @@
             <tr><td class="font-semibold">Sitemap</td><td>2 URLs</td><td>4 URLs</td><td><span class="chip semaforo-a">🟡 Insuficiente aún</span></td></tr>
             <tr><td class="font-semibold">Blog / SEO content</td><td>❌</td><td>❌</td><td><span class="chip semaforo-a">🟡 Pendiente</span></td></tr>
             <tr><td class="font-semibold">GTM / Píxel Meta</td><td>GTM-MQZ7VS95 · solo PageView</td><td>GTM-MQZ7VS95 · solo PageView</td><td><span class="chip semaforo-r">🔴 Sin cambio</span></td></tr>
-            <tr><td class="font-semibold">Indexación Google</td><td>0 URLs</td><td>0 URLs (deploy 23-jul)</td><td><span class="chip semaforo-r">🔴 Requiere Search Console</span></td></tr>
-            <tr><td class="font-semibold">Branding en HTML</td><td>"Clickmart"</td><td>ClickMart + ClickTravel + Edesk + 3 partners</td><td><span class="chip semaforo-a">🟡 6 marcas visibles</span></td></tr>
+            <tr><td class="font-semibold">Indexación Google</td><td>0 URLs</td><td>0 URLs (pendiente Search Console)</td><td><span class="chip semaforo-r">🔴 Requiere Search Console</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -308,7 +306,7 @@
             <span class="text-xs text-slate-500">SEO / Indexación</span>
           </div>
           <h4 class="font-bold text-slate-900">Google aún tiene 0 URLs indexadas</h4>
-          <p class="text-sm text-slate-700 mt-2">A 4 días del deploy, <code>site:clickmart.com.ec</code> devuelve <strong>0 resultados</strong>. Búsquedas "<em>clickmart ecuador asistencia viaje</em>" y "<em>clicktravel ecuador</em>" no listan al cliente en el top 10 — sí a competidores (GO! Assistance, Assist 1, Seguro de Viaje Mundial). Google requiere señal manual para descubrir el sitio nuevo.</p>
+          <p class="text-sm text-slate-700 mt-2">Al 27 de julio, <code>site:clickmart.com.ec</code> devuelve <strong>0 resultados</strong>. Búsquedas "<em>clickmart ecuador asistencia viaje</em>" y "<em>clicktravel ecuador</em>" no listan al cliente en el top 10 — sí a competidores (GO! Assistance, Assist 1, Seguro de Viaje Mundial). Google requiere señal manual para descubrir el sitio nuevo.</p>
           <div class="mt-3 bg-white rounded-lg p-3 text-xs text-slate-700 border border-red-200">
             <strong>Fix urgente:</strong> Verificar dominio en <strong>Google Search Console</strong>, subir el sitemap, y usar <em>Inspeccionar URL → Solicitar indexación</em> para <code>/</code> y <code>/cotizar</code>. Repetir en 3–7 días con <code>Bing Webmaster Tools</code>.
           </div>
@@ -489,13 +487,13 @@
 <!-- SEO + GOOGLE -->
 <section id="seo" class="sec-anchor max-w-7xl mx-auto px-4 py-14">
   <h2 class="text-2xl md:text-3xl font-bold">2 · Presencia en Google &amp; SEO</h2>
-  <p class="text-slate-600 mt-1 max-w-3xl">Cómo se ve Clickmart en el buscador que decide si un viajero encuentra o no la marca al cotizar seguro de viaje. El nuevo build está <strong>en producción desde el 23-jul-2026</strong>; queda pendiente que Google descubra el sitio.</p>
+  <p class="text-slate-600 mt-1 max-w-3xl">Cómo se ve Clickmart en el buscador que decide si un viajero encuentra o no la marca al cotizar seguro de viaje. El nuevo build ya está <strong>en producción</strong>; queda pendiente que Google descubra el sitio.</p>
 
   <div class="grid md:grid-cols-4 gap-4 mt-8">
     <div class="bg-red-50 border border-red-200 rounded-2xl p-5">
       <div class="text-xs uppercase text-red-700 font-semibold">Indexación actual</div>
       <div class="mt-2 text-4xl font-bold text-red-800">0</div>
-      <p class="text-sm text-red-700 mt-1">URLs indexadas en Google. <code>site:clickmart.com.ec</code> devuelve vacío 4 días post-deploy.</p>
+      <p class="text-sm text-red-700 mt-1">URLs indexadas en Google al 27 jul. <code>site:clickmart.com.ec</code> devuelve vacío.</p>
     </div>
     <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5">
       <div class="text-xs uppercase text-amber-700 font-semibold">Sitemap declarado</div>
@@ -1011,7 +1009,7 @@
 <!-- HALLAZGOS -->
 <section id="hallazgos" class="sec-anchor bg-slate-900 text-white">
   <div class="max-w-7xl mx-auto px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">6 · Los 10 hallazgos priorizados</h2>
+    <h2 class="text-2xl md:text-3xl font-bold">6 · Los 9 hallazgos priorizados</h2>
     <p class="text-white/70 mt-1 max-w-3xl">Rankeados por impacto potencial en ventas. Cada uno con acción específica.</p>
 
     <div class="mt-8 space-y-3">
@@ -1053,48 +1051,41 @@
         </div>
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
           <div class="text-2xl font-bold text-red-300 w-10">04</div>
-          <div><div><span class="chip semaforo-r">🔴 Marca</span></div>
-            <div class="font-semibold mt-1">6 marcas visibles en el hero del nuevo build</div>
-            <div class="text-sm text-white/70 mt-1">Definir jerarquía visual clara: <strong>ClickTravel</strong> como marca comercial principal (ya está en el H1), <strong>ClickMart</strong> como empresa/holding, <strong>Edesk</strong> minimizado o retirado del hero, y <strong>partners</strong> (Swiss Travel Assist, WTA, 48hoorass) agrupados en una sola sección "Respaldado por" con jerarquía secundaria.</div>
-          </div>
-        </div>
-        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
-          <div class="text-2xl font-bold text-red-300 w-10">05</div>
           <div><div><span class="chip semaforo-r">🔴 CRO</span></div>
             <div class="font-semibold mt-1">2 de cada 3 clicks pagos no llegan al sitio</div>
             <div class="text-sm text-white/70 mt-1">Auditar link del ad, LCP móvil, banner de cookies. Meta ratio LPV/Click ≥ 65 %.</div>
           </div>
         </div>
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
-          <div class="text-2xl font-bold text-amber-300 w-10">06</div>
+          <div class="text-2xl font-bold text-amber-300 w-10">05</div>
           <div><div><span class="chip semaforo-a">🟡 Contenido</span></div>
             <div class="font-semibold mt-1">Sin blog ni contenido SEO</div>
             <div class="text-sm text-white/70 mt-1">Publicar 8 artículos base: “Requisitos Schengen”, “Seguro EE.UU.”, “Cobertura Galápagos”, etc.</div>
           </div>
         </div>
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
-          <div class="text-2xl font-bold text-amber-300 w-10">07</div>
+          <div class="text-2xl font-bold text-amber-300 w-10">06</div>
           <div><div><span class="chip semaforo-a">🟡 UX</span></div>
             <div class="font-semibold mt-1">Sin chat / WhatsApp visible</div>
             <div class="text-sm text-white/70 mt-1">Implementar botón WhatsApp fijo con número business. Universal y GO! ya lo tienen.</div>
           </div>
         </div>
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
-          <div class="text-2xl font-bold text-amber-300 w-10">08</div>
+          <div class="text-2xl font-bold text-amber-300 w-10">07</div>
           <div><div><span class="chip semaforo-a">🟡 Confianza</span></div>
             <div class="font-semibold mt-1">Cero prueba social visible</div>
             <div class="text-sm text-white/70 mt-1">Testimonios reales, sellos SSL/PCI, alianzas con aerolíneas, casos de siniestros pagados.</div>
           </div>
         </div>
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
-          <div class="text-2xl font-bold text-amber-300 w-10">09</div>
+          <div class="text-2xl font-bold text-amber-300 w-10">08</div>
           <div><div><span class="chip semaforo-a">🟡 Datos</span></div>
             <div class="font-semibold mt-1">Nomenclatura de campañas inconsistente</div>
             <div class="text-sm text-white/70 mt-1">Adoptar convención <code>OBJ_AUD_FORMATO_HOOK_v</code> y aplicar retroactivamente.</div>
           </div>
         </div>
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
-          <div class="text-2xl font-bold text-green-300 w-10">10</div>
+          <div class="text-2xl font-bold text-green-300 w-10">09</div>
           <div><div><span class="chip semaforo-v">🟢 Costos</span></div>
             <div class="font-semibold mt-1">CPM y CTR competitivos</div>
             <div class="text-sm text-white/70 mt-1">CPM $0,76 y CTR 2,05 % son sanos. Mantener creativos ganadores y escalarlos cuando exista señal de conversión.</div>
@@ -1118,7 +1109,7 @@
         <h3 class="font-bold">Lanzar y estabilizar</h3>
       </div>
       <ul class="mt-4 text-sm text-slate-700 space-y-2 list-disc ml-5">
-        <li>✅ <strong>Nuevo build ya en producción</strong> (23-jul). Hecho.</li>
+        <li>✅ <strong>Nuevo build ya en producción</strong>. Hecho.</li>
         <li><strong>Añadir DNS de <code>www.clickmart.com.ec</code></strong> con CNAME al mismo CloudFront + cert SSL. Corregir el 404 de DNS.</li>
         <li><strong>Cambiar Cache-Control</strong> de <code>no-cache</code> a <code>public, max-age=300, s-maxage=86400</code> en el HTML (CDN aprovechada, ahorro directo).</li>
         <li>Añadir <strong>headers de seguridad</strong> vía Response Headers Policy de CloudFront: HSTS, X-Frame-Options, X-Content-Type-Options, CSP.</li>
@@ -1181,7 +1172,7 @@
       <p><strong>Auditoría web:</strong> HTML raw descargado con curl (UA de navegador) sobre las 5 URLs objetivo. Análisis de meta tags, sitemap, robots, tracking scripts. PageSpeed API pública devolvió 429 (rate limit sin API key) — pendiente re-ejecución con clave Google Cloud.</p>
       <p><strong>Datos sociales:</strong> Búsqueda web + snippets de perfiles públicos. Instagram bloquea scraping HTML, cifras aproximadas.</p>
       <p><strong>Indexación Google:</strong> Consulta <code>site:clickmart.com.ec</code> vía búsqueda web pública.</p>
-      <p><strong>Fecha del reporte:</strong> 20 de julio de 2026.</p>
+      <p><strong>Fecha del reporte:</strong> última actualización 27 de julio de 2026.</p>
     </div>
   </details>
 </section>
