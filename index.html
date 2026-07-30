@@ -76,7 +76,7 @@
       <span class="chip bg-white/10 text-white/80 border border-white/10">Sector: Asistencia de viaje internacional · Ecuador</span>
       <span class="chip bg-emerald-500/20 text-emerald-200 border border-emerald-400/40">
         <span class="w-1.5 h-1.5 bg-emerald-300 rounded-full animate-pulse inline-block"></span>
-        Última actualización: 30 jul 2026 · 11:00 (Guayaquil)
+        Última actualización: 30 jul 2026 · 12:00 (Guayaquil)
       </span>
     </div>
     <h1 class="text-3xl md:text-5xl font-bold leading-tight max-w-4xl">Benchmark de marca <span class="text-cyan-300">Clickmart</span> vs. la competencia digital ecuatoriana</h1>
@@ -211,11 +211,10 @@
         <div class="bg-white rounded-xl border border-amber-300 p-4">
           <h4 class="font-semibold text-amber-800 flex items-center gap-2"><span>⚠️</span> Sigue pendiente</h4>
           <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-5">
-            <li><strong>Aún no está en producción</strong>: <code>clickmart.com.ec</code> sigue sirviendo el SPA vacío. Todo este trabajo no impacta hasta el switch de DNS/CDN.</li>
-            <li><strong>Sitemap con solo 4 URLs</strong>: falta cobertura por destino (<code>/planes/eeuu</code>, <code>/planes/europa-schengen</code>, <code>/planes/galapagos</code>) y por intent (<code>/faq</code>, <code>/como-funciona</code>, <code>/blog</code>).</li>
-            <li><strong>Falta Schema Product / Service / FAQPage / BreadcrumbList</strong>: solo hay el Organization + WebSite/WebPage. Los planes de asistencia no tienen ficha estructurada.</li>
+            <li><strong>Ampliar el sitemap</strong>: hoy hay 6 URLs. Meta a 15–20 URLs con páginas por destino (<code>/planes/eeuu</code>, <code>/planes/europa-schengen</code>, <code>/planes/galapagos</code>) y por intent (<code>/faq</code>, <code>/como-funciona</code>).</li>
+            <li><strong>Añadir Schema Product / Service / FAQPage / BreadcrumbList</strong>: hoy solo hay Organization + WebSite + WebPage. Los planes de asistencia no tienen ficha estructurada.</li>
             <li><strong>Píxel Meta sin cambios</strong>: sigue el mismo <code>GTM-MQZ7VS95</code> disparando solo <code>PageView</code>. El nuevo cotizador debe implementar <code>ViewContent</code>, <code>InitiateCheckout</code>, <code>Purchase</code>.</li>
-            <li><strong>Sin blog / contenido SEO</strong>: no hay artículos long-tail para captar búsquedas informacionales ("requisitos Schengen", "seguro Estados Unidos", etc.).</li>
+            <li><strong>Ampliar el blog</strong>: ya existe <code>/blog/</code> con 1 artículo publicado. Meta a 8 artículos long-tail para captar búsquedas informacionales.</li>
           </ul>
         </div>
       </div>
@@ -447,14 +446,6 @@
             <td>GTM-KFJBRPP</td>
           </tr>
           <tr>
-            <td class="font-semibold">Chat / WhatsApp</td>
-            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 No visible</span></td>
-            <td>WhatsApp</td>
-            <td>Crisp + WhatsApp</td>
-            <td>WhatsApp + Tel</td>
-            <td>WhatsApp</td>
-          </tr>
-          <tr>
             <td class="font-semibold">Blog / SEO content</td>
             <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 /blog/ · 1 artículo</span></td>
             <td>✅ Activo</td>
@@ -464,7 +455,7 @@
           </tr>
           <tr>
             <td class="font-semibold">Métodos de pago publicados</td>
-            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 No</span></td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-v">🟢 Publicados</span></td>
             <td>No</td>
             <td>No</td>
             <td>✅ Visa/MC/Amex/PayPal/MP</td>
@@ -1004,23 +995,11 @@
 <!-- HALLAZGOS -->
 <section id="hallazgos" class="sec-anchor bg-slate-900 text-white">
   <div class="max-w-7xl mx-auto px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">6 · Los 9 hallazgos priorizados</h2>
+    <h2 class="text-2xl md:text-3xl font-bold">6 · Los 8 hallazgos priorizados</h2>
     <p class="text-white/70 mt-1 max-w-3xl">Rankeados por impacto potencial en ventas. Cada uno con acción específica.</p>
 
     <div class="mt-8 space-y-3">
-      <template x-data="{ items: [
-        { n:'01', color:'r', area:'Tracking', title:'Píxel solo dispara PageView', action:'Instalar ViewContent + InitiateCheckout + Purchase vía GTM esta semana. Añadir Conversions API server-side.' },
-        { n:'02', color:'r', area:'SEO', title:'Sitio no indexado en Google', action:'Migrar a SSR (Next.js o Astro) o pre-render las rutas principales. Emitir sitemap con 20+ URLs relevantes.' },
-        { n:'03', color:'r', area:'Meta', title:'Ninguna campaña optimizada a compra', action:'Cerrar campaña Perfil IG (o reasignar $10/d), abrir SALES con conversion Purchase, ventana 7d/1d.' },
-        { n:'04', color:'r', area:'Marca', title:'Presencia social pública no verificable', action:'Crear/validar cuentas oficiales @clickmart.ec en IG, FB, TikTok. Reclamar Google Business Profile.' },
-        { n:'05', color:'r', area:'CRO', title:'2 de cada 3 clicks pagos no llegan al sitio', action:'Auditar el enlace del ad, tiempo de carga móvil, banner de cookies y redirects. Meta el ratio LPV/Click a 65 %+.' },
-        { n:'06', color:'a', area:'Contenido', title:'Sin blog ni contenido SEO', action:'Publicar 8 artículos base: “Requisitos Schengen”, “Seguro Estados Unidos”, “Asistencia médica en Europa”, etc.' },
-        { n:'07', color:'a', area:'UX', title:'Sin chat / WhatsApp visible', action:'Implementar botón WhatsApp fijo (mismo formato que Assist Card / Universal). Habilitar API de WhatsApp Business.' },
-        { n:'08', color:'a', area:'Confianza', title:'Cero prueba social visible', action:'Publicar testimonios reales, sellos (SSL/PCI), alianzas con aerolíneas o agencias, casos de siniestros pagados.' },
-        { n:'09', color:'a', area:'Datos', title:'Nomenclatura de campañas inconsistente', action:'Adoptar convención OBJ_AUD_FORMATO_HOOK_v y aplicar retroactivamente para reporting comparable.' },
-        { n:'10', color:'v', area:'Costos', title:'CPM y CTR competitivos', action:'Mantener creativos ganadores y escalarlos cuando exista señal de conversión (no antes).' },
-      ]}"></template>
-      <!-- Lista estática (más portable y accesible que el x-for) -->
+      <!-- Lista estática de hallazgos priorizados -->
       <div class="grid md:grid-cols-2 gap-3">
         <!-- Card 1 -->
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
@@ -1054,36 +1033,29 @@
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
           <div class="text-2xl font-bold text-amber-300 w-10">05</div>
           <div><div><span class="chip semaforo-a">🟡 Contenido</span></div>
-            <div class="font-semibold mt-1">Sin blog ni contenido SEO</div>
-            <div class="text-sm text-white/70 mt-1">Publicar 8 artículos base: “Requisitos Schengen”, “Seguro EE.UU.”, “Cobertura Galápagos”, etc.</div>
+            <div class="font-semibold mt-1">Ampliar el blog SEO</div>
+            <div class="text-sm text-white/70 mt-1">Ya existe <code>/blog/</code> con la primera pieza publicada. Meta a 8 artículos long-tail: "Requisitos Schengen", "Seguro EE.UU.", "Cobertura Galápagos", etc.</div>
           </div>
         </div>
-        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
-          <div class="text-2xl font-bold text-amber-300 w-10">06</div>
-          <div><div><span class="chip semaforo-a">🟡 UX</span></div>
-            <div class="font-semibold mt-1">Sin chat / WhatsApp visible</div>
-            <div class="text-sm text-white/70 mt-1">Implementar botón WhatsApp fijo con número business. Universal y GO! ya lo tienen.</div>
+        <div class="bg-white/5 border border-emerald-400/30 rounded-xl p-4 flex gap-3">
+          <div class="text-2xl font-bold text-emerald-300 w-10">06</div>
+          <div><div><span class="chip semaforo-v">🟢 Confianza</span></div>
+            <div class="font-semibold mt-1">Prueba social ya visible en el sitio</div>
+            <div class="text-sm text-white/70 mt-1">Confirmados en el HTML: 2 testimonios con rating 5★ (Sofía Romero cliente · Armando Torres agente) y partners institucionales (Swiss Travel Assist · WTA by HAS · 48hoorass). Meta: escalar a 10 testimonios + sumar reviews de Google.</div>
           </div>
         </div>
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
           <div class="text-2xl font-bold text-amber-300 w-10">07</div>
-          <div><div><span class="chip semaforo-a">🟡 Confianza</span></div>
-            <div class="font-semibold mt-1">Cero prueba social visible</div>
-            <div class="text-sm text-white/70 mt-1">Testimonios reales, sellos SSL/PCI, alianzas con aerolíneas, casos de siniestros pagados.</div>
-          </div>
-        </div>
-        <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
-          <div class="text-2xl font-bold text-amber-300 w-10">08</div>
           <div><div><span class="chip semaforo-a">🟡 Datos</span></div>
             <div class="font-semibold mt-1">Nomenclatura de campañas inconsistente</div>
             <div class="text-sm text-white/70 mt-1">Adoptar convención <code>OBJ_AUD_FORMATO_HOOK_v</code> y aplicar retroactivamente.</div>
           </div>
         </div>
         <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-3">
-          <div class="text-2xl font-bold text-green-300 w-10">09</div>
+          <div class="text-2xl font-bold text-green-300 w-10">08</div>
           <div><div><span class="chip semaforo-v">🟢 Costos</span></div>
             <div class="font-semibold mt-1">CPM y CTR competitivos</div>
-            <div class="text-sm text-white/70 mt-1">CPM $0,76 y CTR 2,05 % son sanos. Mantener creativos ganadores y escalarlos cuando exista señal de conversión.</div>
+            <div class="text-sm text-white/70 mt-1">CPM $0,68 y CTR 2,21 % son sanos. Mantener creativos ganadores y escalarlos cuando exista señal de conversión.</div>
           </div>
         </div>
       </div>
@@ -1126,7 +1098,6 @@
         <li><strong>Ampliar el sitemap a 20+ URLs</strong>: crear páginas por destino (<code>/planes/eeuu</code>, <code>/planes/europa-schengen</code>, <code>/planes/galapagos</code>) y de intent (<code>/faq</code>, <code>/como-funciona</code>).</li>
         <li>Añadir <strong>JSON-LD adicional</strong>: Service / Product por plan, FAQPage, BreadcrumbList.</li>
         <li>Publicar los primeros 4 artículos SEO ("Requisitos Schengen", "Seguro EE.UU.", "Cobertura Galápagos", "¿Qué cubre una asistencia?").</li>
-        <li>Instalar <strong>botón WhatsApp fijo</strong> (paridad con Universal, GO! y Assist Card).</li>
         <li>Producir <strong>6–8 hooks creativos nuevos</strong> × 3 formatos (imagen, carrusel, reel) para reemplazar las 3 imágenes actuales.</li>
         <li>Publicar 3 reels/semana en IG + TikTok (formato SVM: tips + alertas + casos reales).</li>
         <li>Lanzar audiencias de retargeting (visitantes 30d, IC sin compra).</li>
@@ -1168,7 +1139,7 @@
       <p><strong>Auditoría web:</strong> HTML raw descargado con curl (UA de navegador) sobre las 5 URLs objetivo. Análisis de meta tags, sitemap, robots, tracking scripts. PageSpeed API pública devolvió 429 (rate limit sin API key) — pendiente re-ejecución con clave Google Cloud.</p>
       <p><strong>Datos sociales:</strong> Búsqueda web + snippets de perfiles públicos. Instagram bloquea scraping HTML, cifras aproximadas.</p>
       <p><strong>Indexación Google:</strong> Consulta <code>site:clickmart.com.ec</code> vía búsqueda web pública.</p>
-      <p><strong>Fecha del reporte:</strong> última actualización <strong>30 de julio de 2026 · 11:00 (Guayaquil)</strong>.</p>
+      <p><strong>Fecha del reporte:</strong> última actualización <strong>30 de julio de 2026 · 12:00 (Guayaquil)</strong>.</p>
     </div>
   </details>
 </section>
@@ -1334,7 +1305,7 @@
     <div>Reporte generado por Next Level Media · Julio 2026 · Confidencial</div>
     <div class="flex items-center justify-center gap-2 text-emerald-300">
       <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse inline-block"></span>
-      Última actualización de datos: <strong>30 jul 2026 · 11:00 (America/Guayaquil)</strong>
+      Última actualización de datos: <strong>30 jul 2026 · 12:00 (America/Guayaquil)</strong>
     </div>
   </div>
 </footer>
