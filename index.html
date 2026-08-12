@@ -207,7 +207,7 @@
             <li><strong>Prueba social pre-renderizada</strong>: 2 testimonios (Sofía Romero cliente, Armando Torres agente) con rating 5★ y copy real, indexables por Google.</li>
             <li><strong>Partners visibles</strong>: Swiss Travel Assist, WTA by HAS, 48hoorass — respaldo institucional al fin comunicado.</li>
             <li><strong>Preload de imágenes hero</strong> WebP con <code>fetchpriority="high"</code> → mejora LCP directa.</li>
-            <li><strong>Sitemap</strong> pasa de 2 → 4 URLs (<code>/</code>, <code>/cotizar</code>, <code>/clientes/login</code>, <code>/admin/login</code>).</li>
+            <li><strong>Sitemap</strong>: 11 URLs verificadas (<code>/</code>, <code>/cotizar</code>, <code>/afiliados</code>, <code>/blog</code> + 5 artículos, <code>/clientes/login</code>, <code>/admin/login</code>).</li>
           </ul>
         </div>
         <!-- Persiste -->
@@ -215,7 +215,7 @@
           <h4 class="font-semibold text-amber-800 flex items-center gap-2"><span>⚠️</span> Sigue pendiente</h4>
           <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-5">
             <li><strong>Ampliar el sitemap</strong>: hoy hay 6 URLs. Meta a 15–20 URLs con páginas por destino (<code>/planes/eeuu</code>, <code>/planes/europa-schengen</code>, <code>/planes/galapagos</code>) y por intent (<code>/faq</code>, <code>/como-funciona</code>).</li>
-            <li><strong>Completar Schema estructurado</strong>: ya están <strong>Service</strong> + <strong>Product</strong> + <strong>BreadcrumbList</strong>. Falta solo <strong>FAQPage</strong> para preguntas frecuentes sobre planes.</li>
+            <li><strong>Schema estructurado completado</strong>: ✅ Organization + WebSite + WebPage + Service + Product + BreadcrumbList + FAQPage. Todo implementado (verificado 12 ago).</li>
             <li><strong>Píxel Meta sin cambios</strong>: sigue el mismo <code>GTM-MQZ7VS95</code> disparando solo <code>PageView</code>. El nuevo cotizador debe implementar <code>ViewContent</code>, <code>InitiateCheckout</code>, <code>Purchase</code>.</li>
             <li><strong>Ampliar el blog</strong>: ya existe <code>/blog/</code> con 1 artículo publicado. Meta a 8 artículos long-tail para captar búsquedas informacionales.</li>
           </ul>
@@ -246,7 +246,7 @@
             <tr><td class="font-semibold">Cache-Control</td><td><code>public, max-age=300, s-maxage=86400</code></td><td><span class="chip semaforo-v">🟢 Fix aplicado</span></td></tr>
             <tr><td class="font-semibold">Security headers</td><td>HSTS · X-Frame · X-Content-Type</td><td><span class="chip semaforo-v">🟢 Fix aplicado</span></td></tr>
             <tr><td class="font-semibold">Sitemap</td><td>6 URLs (incluye /blog/)</td><td><span class="chip semaforo-a">🟡 Ampliable</span></td></tr>
-            <tr><td class="font-semibold">Blog / SEO content</td><td>Blog creado: 1 artículo publicado</td><td><span class="chip semaforo-a">🟡 En crecimiento</span></td></tr>
+            <tr><td class="font-semibold">Blog / SEO content</td><td>Blog activo: 5 artículos publicados (verificado 12 ago)</td><td><span class="chip semaforo-v">🟢 En producción</span></td></tr>
             <tr><td class="font-semibold">GTM / Píxel Meta</td><td>GTM-MQZ7VS95 · solo PageView (646/24 h)</td><td><span class="chip semaforo-r">🔴 Pendiente</span></td></tr>
             <tr><td class="font-semibold">Indexación Google</td><td>0 URLs (pendiente Search Console)</td><td><span class="chip semaforo-r">🔴 Pendiente</span></td></tr>
           </tbody>
@@ -450,7 +450,7 @@
           </tr>
           <tr>
             <td class="font-semibold">Blog / SEO content</td>
-            <td class="!bg-blue-50/40"><span class="chip semaforo-a">🟡 /blog/ · 1 artículo</span></td>
+            <td class="!bg-blue-50/40"><span class="chip semaforo-v">🟢 /blog/ · 5 artículos</span></td>
             <td>✅ Activo</td>
             <td>✅ /uablog/</td>
             <td>✅ /consejos-de-viaje/</td>
@@ -496,10 +496,10 @@
       <div class="mt-2 text-4xl font-bold text-red-800">0</div>
       <p class="text-sm text-red-700 mt-1">URLs indexadas en Google al 12 ago. <code>site:clickmart.com.ec</code> devuelve vacío. Falta activar Search Console.</p>
     </div>
-    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5">
-      <div class="text-xs uppercase text-amber-700 font-semibold">Sitemap declarado</div>
-      <div class="mt-2 text-4xl font-bold text-amber-800">6 URLs</div>
-      <p class="text-sm text-amber-700 mt-1">Ampliado con <code>/blog/</code> y <code>/blog/consejos-asistencia-viaje/</code>. Meta a 20+ URLs por destino / FAQ.</p>
+    <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5">
+      <div class="text-xs uppercase text-emerald-700 font-semibold">Sitemap actual (verificado)</div>
+      <div class="mt-2 text-4xl font-bold text-emerald-800">11 URLs</div>
+      <p class="text-sm text-emerald-700 mt-1">Blog con 5 artículos activos. Incluye: home, cotizar, afiliados, blog (índice + 5 artículos), login cliente/admin. Meta siguiente: 20+ URLs con páginas por destino.</p>
     </div>
     <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5">
       <div class="text-xs uppercase text-emerald-700 font-semibold">Contenido crawleable</div>
